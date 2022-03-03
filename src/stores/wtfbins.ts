@@ -13,6 +13,7 @@ export const wtfBinStore = defineStore({
     retrieveWtfBins: async function() {
       let binsJson = await fetch(binsUrl);
       let binsData = await binsJson.json();
+      console.log(binsData);
       this.wtfbins = binsData;
     }
   }

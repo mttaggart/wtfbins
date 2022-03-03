@@ -8,7 +8,11 @@ defineProps<{
 <template>
     <li>
         <h2>{{wtfbin.name}}</h2>
+        <p>Contributed By: {{wtfbin.contributor}}</p>
         <p>{{wtfbin.description}}</p>
+        <footer>
+            <a href="{{wtfbin.documentation}}">Documentation</a>
+        </footer>
     </li>
 </template>
 
