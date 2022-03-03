@@ -1,6 +1,19 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h2>About</h2>
+    <p>
+      The Red Team gets all the cool toys. Like
+      <a href="https://gtfobins.github.io/">GTFOBins</a> and
+      <a href="https://lolbas-project.github.io/">LOLBAS</a>. But what about the Blue team, huh?
+      Where's their cool stuff?
+    </p>
+    <p>
+      That's what WTFBins is all about. This project aims to catalogue
+      benign applications that exhibit suspicious behavior. These binaries
+      can emit noise and false positives in threat hunting and automated 
+      detections. By cataloguing them here, the hope is to allow defenders
+      to improve their detection rules and threat hunting queries.
+    </p>
   </div>
 </template>
 
