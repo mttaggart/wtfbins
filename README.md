@@ -1,2 +1,3 @@
 # wtfbins
-WTF are these binaries doing?! A list of benign applications that mimic malicious behavior.
+
+WTF are these binaries doing?! This project catalogues benign applications with malicious-looking behavior.
