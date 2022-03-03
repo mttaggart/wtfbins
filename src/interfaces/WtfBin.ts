@@ -1,5 +1,7 @@
 export interface WtfBin {
     id: Number,
-    name: String,
-    description: String
+    name: string,
+    contributor: string,
+    description: string,
+    documentation: string
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {WtfBin} from "@/interfaces/WtfBin"
+import type {WtfBin} from "@/interfaces/WtfBin"
 defineProps<{
     wtfbin: WtfBin
 }>()
@@ -8,7 +8,11 @@ defineProps<{
 <template>
     <li>
         <h2>{{wtfbin.name}}</h2>
+        <p>Contributed By: {{wtfbin.contributor}}</p>
         <p>{{wtfbin.description}}</p>
+        <footer>
+            <a v-bind:href="wtfbin.documentation">Documentation</a>
+        </footer>
     </li>
 </template>
 
