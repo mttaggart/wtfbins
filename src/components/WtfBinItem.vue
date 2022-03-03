@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {WtfBin} from "@/interfaces/WtfBin"
+import type {WtfBin} from "@/interfaces/WtfBin"
 defineProps<{
     wtfbin: WtfBin
 }>()

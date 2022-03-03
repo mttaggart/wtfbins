@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "SCCM",
+        "description": "Windows Config Manager runs b64-encoded powershell."
+      },
+      {
+        "id": 2,
+        "name": "PanGpHip.exe",
+        "description": "Palo Alto GP Firewall HIP check runs whoami.exe"
+      }
+]
