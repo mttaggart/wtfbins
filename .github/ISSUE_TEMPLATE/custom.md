@@ -10,4 +10,4 @@ assignees: ''
 * **Contributor Name:**
 * **Application/Executable:**
 * **WTF Behavior Description:**
-* **(Optional) Screenshot of behavior:**
+* **Link to Documentation of Behavior:**
