@@ -11,6 +11,7 @@ import Footer from "@/components/Footer.vue"
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/contribute">Contribute</RouterLink>
       </nav>
     </div>
   </header>
