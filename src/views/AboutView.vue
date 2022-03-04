@@ -8,7 +8,11 @@
       Where's their cool stuff?
     </p>
     <p>
-      That's what WTFBins is all about. This project aims to catalogue
+      <b>WTFBin(n):</b> a binary that behaves exactly 
+      like malware, except, somehow, it's not?
+    </p>
+    <p>
+      This project aims to catalogue
       benign applications that exhibit suspicious behavior. These binaries
       can emit noise and false positives in threat hunting and automated 
       detections. By cataloguing them here, the hope is to allow defenders

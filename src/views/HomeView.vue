@@ -13,7 +13,7 @@
 <template>
   <main>
     <WtfBinTextSearchVue :update-handler="updateTextFilter" />
-    <p>These are WTFBins. I don't know what anyone was thinking.</p>
+    <p>WTF, Bin?!</p>
     <ul>
       <WtfBinItem v-for="(w, i) in store.filterByText" :key="i" :wtfbin="w" wtf/>  
     </ul>
