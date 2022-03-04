@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type {WtfBin} from "@/interfaces/WtfBin"
+import TagContainer from "@/components/TagContainer.vue"
 defineProps<{
-    wtfbin: WtfBin
+    wtfbin: WtfBin,
+    addTag: (t: string) => void,
+    removeTag: (t: string) => void
 }>()
 
 </script>
@@ -15,6 +18,11 @@ defineProps<{
         <p>{{wtfbin.description}}</p>
         <footer>
             <a v-bind:href="wtfbin.documentation">Documentation</a>
+            <TagContainer 
+                :tags="wtfbin.tags"
+                :add-tag="addTag"
+                :remove-tag="removeTag" 
+            />
         </footer>
     </li>
 </template>

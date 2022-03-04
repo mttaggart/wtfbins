@@ -3,5 +3,6 @@ export interface WtfBin {
     name: string,
     contributor: string,
     description: string,
-    documentation: string
+    documentation: string,
+    tags: Array<string>
 }
