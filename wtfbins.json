@@ -22,5 +22,13 @@
         "description": "It runs whoami because it's lost",
         "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
         "tags": ["microsoft", "whoami", "cmd"]
+      },
+      {
+        "id": 4,
+        "contributor": "HuskyHacks",
+        "name": "Nim Lang install binaries",
+        "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
+        "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
+        "tags": ["nim", "windows", "defender"]
       }
 ]
