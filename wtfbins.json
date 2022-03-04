@@ -14,5 +14,13 @@
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
         "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
         "tags": ["paloalto", "vpn", "cmd", "whoami"]
+      },
+      {
+        "id": 3,
+        "contributor": "g1ng3rr00t",
+        "name": "Skype.exe",
+        "description": "It runs whoami because it's lost",
+        "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
+        "tags": ["microsoft", "whoami", "cmd"]
       }
 ]
