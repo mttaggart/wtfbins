@@ -60,11 +60,9 @@ export const wtfBinStore = defineStore({
       this.textFilter = textFilter;
     },
     addTagFilter(tag: string) {
-      console.log(`Adding ${tag}`);
       this.tagFilter.push(tag);
     },
     removeTagFilter(tag: string) {
-      console.log(`Remomving ${tag}`);
       const taxIdx = this.tagFilter.indexOf(tag)
       if (taxIdx >= 0) {
         this.tagFilter.splice(taxIdx, 1);

@@ -2,7 +2,6 @@
 defineProps<{
     tags: Array<string>,
     addTag: (t: string) => void,
-    removeTag: (t: string) => void
 }>()
 </script>
 

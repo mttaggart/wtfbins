@@ -21,11 +21,33 @@ defineProps<{
 }
 
 .search-form input {
-    width: auto;
-    line-height: 1.4rem;
+    width: 80%;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    padding: 0.2rem;
     background: black;
     color: magenta;
     border: 1px dashed magenta;
     border-radius: 3px;
+}
+
+@media screen and (min-width: 700px) {
+    .search-form input {
+        display: block;
+        width: 66%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search-form input {
+        display: block;
+        width: 98%;
+    }
+
+    .search-form label {
+        display: block;
+        margin: 0.4rem 0rem;;
+    }
+
 }
 </style>

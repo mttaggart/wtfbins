@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import WtfBinItem from "@/components/WtfBinItem.vue"
   import WtfBinTextSearchVue from "@/components/WtfBinTextSearch.vue";
+  import ActiveTagContainer from "@/components/ActiveTagContainer.vue";
   import { wtfBinStore } from "@/stores/wtfbins";
   const store = wtfBinStore();
   store.retrieveWtfBins();
@@ -21,22 +22,14 @@
 
 <template>
   <main>
-    <WtfBinTextSearchVue :update-handler="updateTextFilter" />
     <p>WTF, Bin?!</p>
-    <ul>
-      <li 
-        v-for="t of store.tagFilter"
-        @click="() => removeTag(t)"
-      >
-        {{t}}
-      </li>
-    </ul>
-    <ul>
+    <WtfBinTextSearchVue :update-handler="updateTextFilter" />
+    <ActiveTagContainer :remove-tag="removeTag" :tags="store.tagFilter" />
+    <ul class="bin-container">
       <WtfBinItem 
         v-for="(w, i) in store.filterBins" :key="i" 
         :wtfbin="w"
         :add-tag="addTag"
-        :remove-tag="removeTag"
       />  
     </ul>
     <div class=".no-bins" v-if="store.filterBins.length == 0">
@@ -46,8 +39,17 @@
 </template>
 
 <style scoped>
-  ul {
+  .bin-container {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  @media screen and (max-width: 700px) {
+    .bin-container {
+      flex-direction: column;
+    }
   }
 </style>
