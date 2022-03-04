@@ -1,16 +1,18 @@
 [
     {
         "id": 1,
-        "name": "SCCM",
+        "name": "CCM.exe (SCCM)",
         "contributor": "Taggart",
-        "description": "Windows Config Manager runs b64-encoded powershell.",
-        "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts"
+        "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
+        "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
+        "tags": ["microsoft", "windows", "powershell"]
       },
       {
         "id": 2,
         "contributor": "Taggart",
         "name": "PanGpHip.exe",
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
-        "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158"
+        "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
+        "tags": ["microsoft", "windows", "powershell"]
       }
 ]
