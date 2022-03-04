@@ -13,6 +13,6 @@
         "name": "PanGpHip.exe",
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
         "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
-        "tags": ["microsoft", "windows", "powershell"]
+        "tags": ["paloalto", "vpn", "cmd", "whoami"]
       }
 ]
