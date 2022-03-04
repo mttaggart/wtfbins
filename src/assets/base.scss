@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 @font-face {
   font-family: "SportsNight";
   src: url("./fonts/SFSportsNight.woff") format("woff");
@@ -7,7 +9,7 @@ body {
   background: rgb(41, 41, 41);
   color: #ffffff;
   font-size: 20px;
-  font-family:'Courier New', Courier, monospace
+  font-family:'Open Sans', sans-serif;
 }
 
 h1 {
