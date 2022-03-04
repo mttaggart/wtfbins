@@ -1,23 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type {WtfBin} from "@/interfaces/WtfBin"
 defineProps<{
     wtfbin: WtfBin
 }>()
 
-let modalToggled = false;
-const toggleModal = () => {
-    console.log("Toggling Modal");
-    console.log(modalToggled);
-    modalToggled = !modalToggled;
-}
-
 </script>
 
 <template>
-    <li @click="toggleModal">
-        <h2>{{wtfbin.name}}<span v-if="modalToggled">*</span></h2>
-        
-        <p>Contributed By: {{wtfbin.contributor}}</p>
+    <li>
+        <h2>{{wtfbin.name}}</h2>
+        <hr />
+        <p><b>Contributed By:</b> {{wtfbin.contributor}}</p>
         <p>{{wtfbin.description}}</p>
         <footer>
             <a v-bind:href="wtfbin.documentation">Documentation</a>
@@ -33,19 +27,19 @@ const toggleModal = () => {
         margin: 10px 0px;
         border-radius: 10px;
         font-weight: 400;
-        transition: box-shadow .3s;
-        box-shadow: 1px 1px 1px black;
+        /* transition: box-shadow .3s; */
+        box-shadow: 1px 1px 3px black;
     }
 
-    li:hover {
+    li h2 {
+        margin: 0;
+    }
+
+    /* li:hover {
         font-weight: 800;
         box-shadow: 7px 7px 7px black;
         cursor: pointer;
-    }
-
-    li:hover h2{
-        color: magenta;
-    }
+    } */
 
 
 </style>

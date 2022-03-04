@@ -25,6 +25,7 @@ defineProps<{
     line-height: 1.4rem;
     background: black;
     color: magenta;
-    border: none;
+    border: 1px dashed magenta;
+    border-radius: 3px;
 }
 </style>
