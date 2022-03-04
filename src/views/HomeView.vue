@@ -22,7 +22,7 @@
 
 <template>
   <main>
-    <p>WTF, Bin?!</p>
+    <p class="tagline">WTF, Bin?!</p>
     <WtfBinTextSearchVue :update-handler="updateTextFilter" />
     <ActiveTagContainer :remove-tag="removeTag" :tags="store.tagFilter" />
     <ul class="bin-container">
@@ -45,6 +45,12 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+  }
+
+  .tagline {
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }
 
   @media screen and (max-width: 700px) {

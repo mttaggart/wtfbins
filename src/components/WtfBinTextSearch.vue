@@ -13,8 +13,9 @@ defineProps<{
 
 <style scoped>
 .search-form {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     vertical-align: middle;
+    padding: 0px 10px;
 }
 .search-form label {
     margin-right: 1rem;
@@ -35,6 +36,13 @@ defineProps<{
     .search-form input {
         display: block;
         width: 66%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .search-form input {
+        display: block;
+        width: 30%;
     }
 }
 
