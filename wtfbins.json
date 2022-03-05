@@ -30,5 +30,13 @@
         "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
         "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
         "tags": ["nim", "windows", "defender"]
+      },
+      {
+        "id": 5,
+        "contributor": "Ductape and Dreams",
+        "name": "Windows TCP Connections on High Ports",
+        "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
+        "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+        "tags": ["network", "windows", "microsoft"]
       }
 ]
