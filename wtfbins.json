@@ -38,5 +38,21 @@
         "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
         "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
         "tags": ["network", "windows", "microsoft"]
+      },
+      {
+        "id": 6,
+        "contributor": "Taggart",
+        "name": "Edge/Chromium Browsers",
+        "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
+        "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
+        "tags": ["chrome", "edge", "windows", "linux", "commandline"]
+      },
+      {
+        "id": 7,
+        "contributor": "Taggart",
+        "name": "Windows Terminal",
+        "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
+        "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
+        "tags": ["windows", "microsoft", "commandline"]
       }
 ]
