@@ -54,5 +54,13 @@
         "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
         "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
         "tags": ["windows", "microsoft", "commandline"]
+      },
+      {
+        "id": 8,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+        "name": "Network Detective Data Collector (nddc.exe)",
+        "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
+        "tags": ["windows", "network", "impacket"]
       }
 ]
