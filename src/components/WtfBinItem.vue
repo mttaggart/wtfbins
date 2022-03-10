@@ -1,17 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import type {WtfBin} from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
-defineProps<{
+const props = defineProps<{
     wtfbin: WtfBin,
     addTag: (t: string) => void,
 }>()
-
 </script>
 
 <template>
     <li class="bin-item">
-        <h2>{{wtfbin.name}}</h2>
+        <RouterLink
+            :to="{ name: 'bin', params: { id: wtfbin.id.toString() }}"
+        >
+            <h2>{{wtfbin.name}}</h2>
+        </RouterLink>
         <hr />
         <p><b>Contributed By:</b> {{wtfbin.contributor}}</p>
         <p>{{wtfbin.description}}</p>
