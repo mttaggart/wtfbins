@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { RouterView } from "vue-router";
   import WtfBinItem from "@/components/WtfBinItem.vue"
   import WtfBinTextSearchVue from "@/components/WtfBinTextSearch.vue";
   import ActiveTagContainer from "@/components/ActiveTagContainer.vue";
@@ -22,18 +23,21 @@
 
 <template>
   <main>
-    <p class="tagline">WTF, Bin?!</p>
-    <WtfBinTextSearchVue :update-handler="updateTextFilter" />
-    <ActiveTagContainer :remove-tag="removeTag" :tags="store.tagFilter" />
-    <ul class="bin-container">
-      <WtfBinItem 
-        v-for="(w, i) in store.filterBins" :key="i" 
-        :wtfbin="w"
-        :add-tag="addTag"
-      />  
-    </ul>
-    <div class=".no-bins" v-if="store.filterBins.length == 0">
-      I got no bins for ya!
+    <RouterView></RouterView>
+    <div class="bins-container" v-if="$route.params.id == undefined">
+      <p class="tagline">WTF, Bin?!</p>
+      <WtfBinTextSearchVue :update-handler="updateTextFilter" />
+      <ActiveTagContainer :remove-tag="removeTag" :tags="store.tagFilter" />
+      <ul class="bin-container">
+        <WtfBinItem 
+          v-for="(w, i) in store.filterBins" :key="i" 
+          :wtfbin="w"
+          :add-tag="addTag"
+        />  
+      </ul>
+      <div class=".no-bins" v-if="store.filterBins.length == 0">
+        I got no bins for ya!
+      </div>
     </div>
   </main>
 </template>

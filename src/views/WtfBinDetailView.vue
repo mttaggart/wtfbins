@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router"
+import { useRoute } from "vue-router"
 import type {WtfBin} from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
+import { wtfBinStore } from "@/stores/wtfbins";
 
-const props = defineProps<{
-    wtfbin: WtfBin | undefined,
-    unselectBin: () => void
-}>()
+const route = useRoute();
+const store = wtfBinStore();
+store.retrieveWtfBins();
+const binId = parseInt(route.params.id as string);
+const wtfbin: WtfBin | undefined = store.binById(binId);
+
 
 </script>
 
 <template>
     <div v-if="wtfbin != undefined">
         <li class="bin-item">
-            <h3 @click="props.unselectBin"> &lt; Back</h3>
             <h2>{{wtfbin.name}}</h2>
             <hr />
             <p><b>Contributed By:</b> {{wtfbin.contributor}}</p>

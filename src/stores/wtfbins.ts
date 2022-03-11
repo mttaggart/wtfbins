@@ -46,6 +46,13 @@ export const wtfBinStore = defineStore({
           tagMatch(b.tags, state.tagFilter)
         )
       )
+    },
+    binById: (state) => {
+      return (binId: Number): WtfBin | undefined => {
+        return state.wtfbins.find((b: WtfBin) => (
+          b.id == binId
+        ));
+      }
     }
   },
   actions: {
