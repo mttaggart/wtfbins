@@ -62,5 +62,13 @@
         "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
         "tags": ["windows", "network", "impacket"]
+      },
+      {
+        "id": 9,
+        "contributor": "59e5aaf4",
+        "name": "Adobe Reader (reader_sl.exe)",
+        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+        "tags": ["adobe", "windows", "commandline"]
       }
 ]
