@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import type {WtfBin} from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
 const props = defineProps<{
@@ -10,11 +9,7 @@ const props = defineProps<{
 
 <template>
     <li class="bin-item">
-        <RouterLink
-            :to="{ name: 'bin', params: { id: wtfbin.id.toString() }}"
-        >
-            <h2>{{wtfbin.name}}</h2>
-        </RouterLink>
+        <h2>{{wtfbin.name}}</h2>
         <hr />
         <p><b>Contributed By:</b> {{wtfbin.contributor}}</p>
         <p>{{wtfbin.description}}</p>
