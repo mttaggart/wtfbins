@@ -2,14 +2,14 @@
     {
         "id": 1,
         "name": "CCM.exe (SCCM)",
-        "contributor": "Taggart",
+        "contributor": "mttaggart",
         "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
         "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
         "tags": ["microsoft", "windows", "powershell"]
       },
       {
         "id": 2,
-        "contributor": "Taggart",
+        "contributor": "mttaggart",
         "name": "PanGpHip.exe",
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
         "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
@@ -41,7 +41,7 @@
       },
       {
         "id": 6,
-        "contributor": "Taggart",
+        "contributor": "mttaggart",
         "name": "Edge/Chromium Browsers",
         "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
         "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
@@ -49,7 +49,7 @@
       },
       {
         "id": 7,
-        "contributor": "Taggart",
+        "contributor": "mttaggart",
         "name": "Windows Terminal",
         "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
         "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
@@ -70,5 +70,21 @@
         "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
         "tags": ["adobe", "windows", "commandline"]
+      },
+      {
+        "id": 10,
+        "contributor": "59e5aaf4",
+        "name": "Adobe Reader (reader_sl.exe)",
+        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+        "tags": ["adobe", "windows", "commandline"]
+      },
+      {
+        "id": 11,
+        "contributor": "mttaggart",
+        "name": "Sophos Web Protection (sophosxl.net)",
+        "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
+        "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
+        "tags": ["sophos", "dns"]
       }
 ]
