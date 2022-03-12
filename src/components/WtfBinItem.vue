@@ -46,6 +46,14 @@ const props = defineProps<{
         margin: 0;
     }
 
+     @media screen and (max-width: 1025px) {
+    .bin-item {
+      flex-direction: column;
+      max-width: 90%;
+      min-width: 90%;
+    }
+  }
+
     @media screen and (max-width: 700px) {
     .bin-item {
       flex-direction: column;

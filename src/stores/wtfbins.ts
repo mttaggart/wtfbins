@@ -48,8 +48,8 @@ export const wtfBinStore = defineStore({
       )
     },
     binById: (state) => {
-      return (binId: Number): WtfBin | undefined => {
-        return state.wtfbins.find((b: WtfBin) => (
+      return (binId: Number): Array<WtfBin>  => {
+        return state.wtfbins.filter((b: WtfBin) => (
           b.id == binId
         ));
       }

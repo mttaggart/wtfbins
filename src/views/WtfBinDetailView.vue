@@ -8,13 +8,14 @@ const route = useRoute();
 const store = wtfBinStore();
 store.retrieveWtfBins();
 const binId = parseInt(route.params.id as string);
-const wtfbin: WtfBin | undefined = store.binById(binId);
+
+console.log(binId);
 
 
 </script>
 
 <template>
-    <div v-if="wtfbin != undefined">
+    <div v-for="(wtfbin, i) in store.binById(binId) ">
         <li class="bin-item">
             <h2>{{wtfbin.name}}</h2>
             <hr />
@@ -29,7 +30,7 @@ const wtfbin: WtfBin | undefined = store.binById(binId);
             </footer>
         </li>
     </div>
-    <div v-else>
+    <div v-if="store.binById(binId).length == 0">
         <h2>No such WTFbin!</h2>
     </div>
 </template>
@@ -41,8 +42,8 @@ const wtfbin: WtfBin | undefined = store.binById(binId);
         padding: 1rem;
         margin: 10px 10px;
         border-radius: 10px;
-        max-width: 30%;
-        min-width: 30%;
+        max-width: 80%;
+        min-width: 80%;
         font-weight: 400;
         /* transition: box-shadow .3s; */
         box-shadow: 1px 1px 3px black;
@@ -58,8 +59,8 @@ const wtfbin: WtfBin | undefined = store.binById(binId);
     @media screen and (max-width: 700px) {
     .bin-item {
       flex-direction: column;
-      max-width: 80%;
-      min-width: 80%;
+      max-width: 90%;
+      min-width: 90%;
     }
   }
 
