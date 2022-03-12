@@ -1,16 +1,90 @@
 [
     {
         "id": 1,
-        "name": "SCCM",
-        "contributor": "Taggart",
-        "description": "Windows Config Manager runs b64-encoded powershell.",
-        "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts"
+        "name": "CCM.exe (SCCM)",
+        "contributor": "mttaggart",
+        "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
+        "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
+        "tags": ["microsoft", "windows", "powershell"]
       },
       {
         "id": 2,
-        "contributor": "Taggart",
+        "contributor": "mttaggart",
         "name": "PanGpHip.exe",
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
-        "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158"
+        "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
+        "tags": ["paloalto", "vpn", "cmd", "whoami"]
+      },
+      {
+        "id": 3,
+        "contributor": "g1ng3rr00t",
+        "name": "Skype.exe",
+        "description": "It runs whoami because it's lost",
+        "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
+        "tags": ["microsoft", "whoami", "cmd"]
+      },
+      {
+        "id": 4,
+        "contributor": "HuskyHacks",
+        "name": "Nim Lang install binaries",
+        "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
+        "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
+        "tags": ["nim", "windows", "defender"]
+      },
+      {
+        "id": 5,
+        "contributor": "Ductape and Dreams",
+        "name": "Windows TCP Connections on High Ports",
+        "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
+        "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+        "tags": ["network", "windows", "microsoft"]
+      },
+      {
+        "id": 6,
+        "contributor": "mttaggart",
+        "name": "Edge/Chromium Browsers",
+        "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
+        "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
+        "tags": ["chrome", "edge", "windows", "linux", "commandline"]
+      },
+      {
+        "id": 7,
+        "contributor": "mttaggart",
+        "name": "Windows Terminal",
+        "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
+        "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
+        "tags": ["windows", "microsoft", "commandline"]
+      },
+      {
+        "id": 8,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+        "name": "Network Detective Data Collector (nddc.exe)",
+        "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
+        "tags": ["windows", "network", "impacket"]
+      },
+      {
+        "id": 9,
+        "contributor": "59e5aaf4",
+        "name": "Adobe Reader (reader_sl.exe)",
+        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+        "tags": ["adobe", "windows", "commandline"]
+      },
+      {
+        "id": 10,
+        "contributor": "59e5aaf4",
+        "name": "Adobe Reader (reader_sl.exe)",
+        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+        "tags": ["adobe", "windows", "commandline"]
+      },
+      {
+        "id": 11,
+        "contributor": "mttaggart",
+        "name": "Sophos Web Protection (sophosxl.net)",
+        "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
+        "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
+        "tags": ["sophos", "dns"]
       }
 ]

@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Made with 💙 by <a href="https://taggart-tech.com">Taggart Tech</a></p>
+        <p><a href="https://github.com/mttaggart/wtfbins">Made</a> with 💙 by <a href="https://taggart-tech.com">Taggart Tech</a></p>
     </footer>
 </template>
 
