@@ -73,14 +73,6 @@
       },
       {
         "id": 10,
-        "contributor": "59e5aaf4",
-        "name": "Adobe Reader (reader_sl.exe)",
-        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
-        "tags": ["adobe", "windows", "commandline"]
-      },
-      {
-        "id": 11,
         "contributor": "mttaggart",
         "name": "Sophos Web Protection (sophosxl.net)",
         "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
