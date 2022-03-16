@@ -78,5 +78,13 @@
         "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
         "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
         "tags": ["sophos", "dns"]
+      },
+      {
+        "id": 11,
+        "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+        "name": "LogMeIn.exe",
+        "description": " LogMeIn runs \"avfilter.js\" via cscript to check what AV is running on your system for some godawful reason. As far as I am aware, they have yet to provide any substantial documentation or reasoning as to why.",
+        "documentation": "https://community.logmein.com/t5/LogMeIn-Central-Discussions/Why-AVfilter-js-running-in-my-logMein-client-machines/td-p/255466",
+        "tags": ["logmein", "windows"]
       }
 ]
