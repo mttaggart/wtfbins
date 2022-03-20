@@ -86,5 +86,13 @@
         "description": " LogMeIn runs \"avfilter.js\" via cscript to check what AV is running on your system for some godawful reason. As far as I am aware, they have yet to provide any substantial documentation or reasoning as to why.",
         "documentation": "https://community.logmein.com/t5/LogMeIn-Central-Discussions/Why-AVfilter-js-running-in-my-logMein-client-machines/td-p/255466",
         "tags": ["logmein", "windows", "cscript"]
+      },
+      {
+        "id": 12,
+        "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+        "name": "RingCentral.exe",
+        "description": "Binary installs deep in AppData, drops a setDefaultAppByProtcol.vbs script, that is then executed to query/create/modify registry entries by running cmd.exe to call cscript //NoLogo and then finally run the vbscript.",
+        "documentation": "https://github.com/WidespreadPandemic/RingCentral_WTFBin",
+        "tags": ["ringcentral", "windows", "cscript", "vbscript"]
       }
 ]
