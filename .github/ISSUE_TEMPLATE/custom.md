@@ -11,3 +11,4 @@ assignees: ''
 * **Application/Executable:**
 * **WTF Behavior Description:**
 * **Link to Documentation of Behavior:**
+* **Please provide any images for additional evidence.**
