@@ -110,8 +110,8 @@
       {
         "id": 13,
         "contributor": "Dray Agha (@purp1ew0lf)",
-        "name": "Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe)",
-        "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe. It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
+        "name": "Bloodhound.exe",
+        "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe). It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/14",
         "imageURL": "https://user-images.githubusercontent.com/44196051/159670129-8dd8eb03-3388-493f-bff3-e483a227c10f.png",
         "tags": ["windows", "silverbullet", "bloodhound"]
