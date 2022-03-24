@@ -24,6 +24,7 @@ console.log(binId);
                 {{ wtfbin.contributor }}
             </p>
             <p>{{ wtfbin.description }}</p>
+            <img v-if="wtfbin.imageURL != ''" :src="wtfbin.imageURL" />
             <footer>
                 <a v-bind:href="wtfbin.documentation">Documentation</a>
                 <TagContainer :tags="wtfbin.tags" :add-tag="() => { }" />
@@ -57,6 +58,12 @@ h3 {
     margin: 0;
 }
 
+.bin-item img {
+    width: 50%;
+    display: block; 
+    margin: auto;
+}
+
 @media screen and (max-width: 1025px) {
     .bin-item {
         max-width: 90%;
@@ -66,13 +73,18 @@ h3 {
     }
 }
 
-/* @media screen and (max-width: 700px) {
-    .bin-item {
+@media screen and (max-width: 700px) {
+    /* .bin-item {
         flex-direction: column;
         max-width: 90%;
         min-width: 90%;
         margin-left: auto;
         margin-right: auto;
+    } */
+    .bin-item img {
+        width: 80%;
+        display: block; 
+        margin: auto;
     }
-} */
+}
 </style>
