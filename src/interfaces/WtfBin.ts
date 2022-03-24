@@ -4,5 +4,6 @@ export interface WtfBin {
     contributor: string,
     description: string,
     documentation: string,
+    imageURL: string,
     tags: Array<string>
 }
