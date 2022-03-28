@@ -32,7 +32,7 @@
         "name": "Nim Lang install binaries",
         "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
         "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
-        "imageURL": "",
+        "imageURL": "https://user-images.githubusercontent.com/57866415/160456488-42e6a3e4-70f8-4ac2-99b4-75155749ea67.png",
         "tags": ["nim", "windows", "defender"]
       },
       {
@@ -110,10 +110,19 @@
       {
         "id": 13,
         "contributor": "Dray Agha (@purp1ew0lf)",
-        "name": "Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe)",
-        "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe. It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
+        "name": "Bloodhound.exe",
+        "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe). It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/14",
         "imageURL": "https://user-images.githubusercontent.com/44196051/159670129-8dd8eb03-3388-493f-bff3-e483a227c10f.png",
         "tags": ["windows", "silverbullet", "bloodhound"]
+      },
+      {
+        "id": 14,
+        "contributor": "Matt Anderson",
+        "name": "Noregon Fake Windows Components",
+        "description": "Named after legitimate Windows binaries, in the wrong location. They were spawned in succession from C:\\Program Files (x86)\\noregon\\JPRO diagnostics\\Fleets.exe > C:\\Program Files (x86)\\noregon\\JPRO diagnostics_jpro_start.exe > C:\\Users\\AppData\\Local\\icsys.icn.exe > c:\\Windows\\System\\explorer.exe > c:\\Windows\\System\\spoolsv.exe > C:\\Windows\\System\\svchost.exe. The files are custom binaries compiled with Visual Basic. They appear to be changed/created regularly as the hashes seem to change often.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/16",
+        "imageURL": "https://user-images.githubusercontent.com/75185144/160493606-185e1e80-77d9-48d5-bf5e-536a6e282201.png",
+        "tags": ["windows", "noregon", "fake"]
       }
 ]
