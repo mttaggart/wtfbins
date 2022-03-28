@@ -115,5 +115,14 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/14",
         "imageURL": "https://user-images.githubusercontent.com/44196051/159670129-8dd8eb03-3388-493f-bff3-e483a227c10f.png",
         "tags": ["windows", "silverbullet", "bloodhound"]
+      },
+      {
+        "id": 14,
+        "contributor": "Matt Anderson",
+        "name": "Noregon Fake Windows Components",
+        "description": "Named after legitimate Windows binaries, in the wrong location. They were spawned in succession from C:\\Program Files (x86)\\noregon\\JPRO diagnostics\\Fleets.exe > C:\\Program Files (x86)\\noregon\\JPRO diagnostics_jpro_start.exe > C:\\Users\\AppData\\Local\\icsys.icn.exe > c:\\Windows\\System\\explorer.exe > c:\\Windows\\System\\spoolsv.exe > C:\\Windows\\System\\svchost.exe. The files are custom binaries compiled with Visual Basic. They appear to be changed/created regularly as the hashes seem to change often.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/16",
+        "imageURL": "https://user-images.githubusercontent.com/75185144/160493606-185e1e80-77d9-48d5-bf5e-536a6e282201.png",
+        "tags": ["windows", "noregon", "fake"]
       }
 ]
