@@ -32,7 +32,7 @@
         "name": "Nim Lang install binaries",
         "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
         "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
-        "imageURL": "",
+        "imageURL": "https://user-images.githubusercontent.com/57866415/160456488-42e6a3e4-70f8-4ac2-99b4-75155749ea67.png",
         "tags": ["nim", "windows", "defender"]
       },
       {
