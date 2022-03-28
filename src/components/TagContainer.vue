@@ -27,6 +27,7 @@ defineProps<{
     ul {
         padding: 0;
         display: flex;
+        flex-wrap: wrap;
     }
 
     .wtfbin-tag {

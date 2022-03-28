@@ -46,6 +46,7 @@ console.log(binId);
     max-width: 60%;
     min-width: 60%;
     font-weight: 400;
+    hyphens: manual;
     /* transition: box-shadow .3s; */
     box-shadow: 1px 1px 3px black;
 }
