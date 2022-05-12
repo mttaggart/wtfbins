@@ -133,5 +133,14 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/17",
         "imageURL": "https://user-images.githubusercontent.com/89753991/160697979-7c579248-a718-4a64-8936-b18384612789.png",
         "tags": ["windows", "adobe", "lsass"]
+      },
+      {
+        "id": 16,
+        "contributor": "Micah Babinski (mbabinski)",
+        "name": "Ivanti Endpoint Manager",
+        "description": "The command-line arguments for the exes listed above occassionally contain fragmented, seemingly-random strings containing special unicode characters, what looks like bits of HTML or XML tags, and/or URL-enocoded strings. For example:\n* LDdrives.exe -p 51205 -c -s -b5D€\u001aCv\n* LDdrives.exe -p 51205 -c -s -b8µq\n* LDdrives.exe -p 51205 -c -s \"-b8</timer>¶(+N& \"\n* LDmemory.exe -p 51207 -c -s \"-b32164/><key nam=ÂgËo�\"\n* LDnetwork.exe -p 51214 -c -s -b10</timer>žÊ/€/�\n\nThese processes all spawn instances of Console Host (conhost.exe) with the 0x4 flag, like `C:\\Windows\\system32\\conhost.exe 0x4`.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/22",
+        "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
+        "tags": ["windows", "ivanti"]
       }
 ]
