@@ -3,6 +3,7 @@ import { useRoute } from "vue-router"
 import type { WtfBin } from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
 import { wtfBinStore } from "@/stores/wtfbins";
+import { Marked } from '@ts-stack/markdown';
 
 const route = useRoute();
 const store = wtfBinStore();
@@ -23,7 +24,7 @@ console.log(binId);
                 <b>Contributed By:</b>
                 {{ wtfbin.contributor }}
             </p>
-            <p>{{ wtfbin.description }}</p>
+            <div class="markdown" v-html="Marked.parse(wtfbin.description)"></div>
             <img v-if="wtfbin.imageURL != ''" :src="wtfbin.imageURL" />
             <footer>
                 <a v-bind:href="wtfbin.documentation">Documentation</a>
