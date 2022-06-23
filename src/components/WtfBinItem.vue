@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import type { WtfBin } from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
+import { Marked } from '@ts-stack/markdown';
 const props = defineProps<{
     wtfbin: WtfBin,
     addTag: (t: string) => void,
@@ -18,7 +19,7 @@ const props = defineProps<{
             <b>Contributed By:</b>
             {{ wtfbin.contributor }}
         </p>
-        <p>{{ wtfbin.description }}</p>
+        <div class="markdown" v-html="Marked.parse(wtfbin.preview)"></div>
         <footer>
             <a v-bind:href="wtfbin.documentation">Documentation</a>
             <TagContainer :tags="wtfbin.tags" :add-tag="addTag" />
