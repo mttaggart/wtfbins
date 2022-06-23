@@ -25,7 +25,9 @@ console.log(binId);
                 {{ wtfbin.contributor }}
             </p>
             <div class="markdown" v-html="Marked.parse(wtfbin.description)"></div>
-            <img v-if="wtfbin.imageURL != ''" :src="wtfbin.imageURL" />
+            <a v-bind:href="wtfbin.imageURL" target="_blank">
+                <img v-if="wtfbin.imageURL != ''" :src="wtfbin.imageURL" />
+            </a>
             <footer>
                 <a v-bind:href="wtfbin.documentation">Documentation</a>
                 <TagContainer :tags="wtfbin.tags" :add-tag="() => { }" />
