@@ -3,88 +3,170 @@
         "id": 1,
         "name": "CCM.exe (SCCM)",
         "contributor": "mttaggart",
+				"preview": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
         "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
         "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
+        "imageURL": "",
         "tags": ["microsoft", "windows", "powershell"]
       },
       {
         "id": 2,
         "contributor": "mttaggart",
+				"preview": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
         "name": "PanGpHip.exe",
         "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
         "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
+        "imageURL": "",
         "tags": ["paloalto", "vpn", "cmd", "whoami"]
       },
       {
         "id": 3,
         "contributor": "g1ng3rr00t",
+				"preview": "It runs whoami because it's lost.",
         "name": "Skype.exe",
-        "description": "It runs whoami because it's lost",
+        "description": "It runs whoami because it's lost.",
         "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
+        "imageURL": "",
         "tags": ["microsoft", "whoami", "cmd"]
       },
       {
         "id": 4,
         "contributor": "HuskyHacks",
+				"preview": "The Nim language install binaries in certain versions trigger Windows Defender.",
         "name": "Nim Lang install binaries",
         "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
         "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
+        "imageURL": "https://user-images.githubusercontent.com/57866415/160456488-42e6a3e4-70f8-4ac2-99b4-75155749ea67.png",
         "tags": ["nim", "windows", "defender"]
       },
       {
         "id": 5,
         "contributor": "Ductape and Dreams",
+				"preview": "Windows uses random high service ports for a variety of functions.",
         "name": "Windows TCP Connections on High Ports",
         "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
         "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+        "imageURL": "",
         "tags": ["network", "windows", "microsoft"]
       },
       {
         "id": 6,
         "contributor": "mttaggart",
+				"preview": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious.",
         "name": "Edge/Chromium Browsers",
         "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
         "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
+        "imageURL": "",
         "tags": ["chrome", "edge", "windows", "linux", "commandline"]
       },
       {
         "id": 7,
         "contributor": "mttaggart",
+				"preview": "Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
         "name": "Windows Terminal",
         "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
         "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
+        "imageURL": "",
         "tags": ["windows", "microsoft", "commandline"]
       },
       {
         "id": 8,
         "contributor": "Dray Agha (@purp1ew0lf)",
+				"preview": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
         "name": "Network Detective Data Collector (nddc.exe)",
         "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
+        "imageURL": "",
         "tags": ["windows", "network", "impacket"]
       },
       {
         "id": 9,
         "contributor": "59e5aaf4",
+				"preview": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
         "name": "Adobe Reader (reader_sl.exe)",
         "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+        "imageURL": "",
         "tags": ["adobe", "windows", "commandline"]
       },
       {
         "id": 10,
-        "contributor": "59e5aaf4",
-        "name": "Adobe Reader (reader_sl.exe)",
-        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
-        "tags": ["adobe", "windows", "commandline"]
+        "contributor": "mttaggart",
+        "name": "Sophos Web Protection (sophosxl.net)",
+				"preview": "Sophos Web Protection, performs odd DNS lookups to sophosxl.net.",
+        "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
+        "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
+        "imageURL": "",
+        "tags": ["sophos", "dns"]
       },
       {
         "id": 11,
-        "contributor": "mttaggart",
-        "name": "Sophos Web Protection (sophosxl.net)",
-        "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
-        "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
-        "tags": ["sophos", "dns"]
+        "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+        "name": "LogMeIn.exe",
+				"preview": "LogMeIn runs `avfilter.js` via cscript to check what AV is running on your system.",
+        "description": " LogMeIn runs \"avfilter.js\" via cscript to check what AV is running on your system for some godawful reason. As far as I am aware, they have yet to provide any substantial documentation or reasoning as to why.",
+        "documentation": "https://community.logmein.com/t5/LogMeIn-Central-Discussions/Why-AVfilter-js-running-in-my-logMein-client-machines/td-p/255466",
+        "imageURL": "",
+        "tags": ["logmein", "windows", "cscript"]
+      },
+      {
+        "id": 12,
+        "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+        "name": "RingCentral.exe",
+				"preview": "Binary installs deep in AppData, drops a setDefaultAppByProtcol.vbs script.",
+        "description": "Binary installs deep in AppData, drops a setDefaultAppByProtcol.vbs script, that is then executed to query/create/modify registry entries by running cmd.exe to call cscript //NoLogo and then finally run the vbscript.",
+        "documentation": "https://github.com/WidespreadPandemic/RingCentral_WTFBin",
+        "imageURL": "",
+        "tags": ["ringcentral", "windows", "cscript", "vbscript"]
+      },
+      {
+        "id": 13,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+        "name": "Bloodhound.exe",
+				"preview": "Silver Bullet Technology's Ranger runs an executable called `Bloodhound.exe`",
+        "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe). It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/14",
+        "imageURL": "https://user-images.githubusercontent.com/44196051/159670129-8dd8eb03-3388-493f-bff3-e483a227c10f.png",
+        "tags": ["windows", "silverbullet", "bloodhound"]
+      },
+      {
+        "id": 14,
+        "contributor": "Matt Anderson",
+        "name": "Noregon Fake Windows Components",
+				"preview": "Named after legitimate Windows binaries, in the wrong location.",
+        "description": "Named after legitimate Windows binaries, in the wrong location. They were spawned in succession from `C:\\Program Files (x86)\\noregon\\JPRO diagnostics\\Fleets.exe` > `C:\\Program Files (x86)\\noregon\\JPRO diagnostics_jpro_start.exe` > `C:\\Users\\AppData\\Local\\icsys.icn.exe > c:\\Windows\\System\\explorer.exe` > `C:\\Windows\\System\\spoolsv.exe` > `C:\\Windows\\System\\svchost.exe`.\n\nThe files are custom binaries compiled with Visual Basic. They appear to be changed/created regularly as the hashes seem to change often.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/16",
+        "imageURL": "https://user-images.githubusercontent.com/75185144/160493606-185e1e80-77d9-48d5-bf5e-536a6e282201.png",
+        "tags": ["windows", "noregon", "fake"]
+      },
+      {
+        "id": 15,
+        "contributor": "g1ng3rr00t",
+				"preview": "`AGMService.exe` opens and reads from the LSASS process",
+        "name": "Adobe Genuine Monitor Service",
+        "description": "Adobe Genuine Monitor Service (`AGMService.exe`) opens and reads from the LSASS process. While this access is legitimate, it can create false positives for process access alerts.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/17",
+        "imageURL": "https://user-images.githubusercontent.com/89753991/160697979-7c579248-a718-4a64-8936-b18384612789.png",
+        "tags": ["windows", "adobe", "lsass"]
+      },
+      {
+        "id": 16,
+        "contributor": "Micah Babinski (mbabinski)",
+				"preview": "Fragmented, seemingly-random strings containing special unicode characters.",
+        "name": "Ivanti Endpoint Manager",
+        "description": "The command-line arguments for the exes listed below occassionally contain fragmented, seemingly-random strings containing special unicode characters, what looks like bits of HTML or XML tags, and/or URL-enocoded strings. For example:\n* LDdrives.exe -p 51205 -c -s -b5D€\u001aCv\n* LDdrives.exe -p 51205 -c -s -b8µq\n* LDdrives.exe -p 51205 -c -s \"-b8</timer>¶(+N& \"\n* LDmemory.exe -p 51207 -c -s \"-b32164/><key nam=ÂgËo�\"\n* LDnetwork.exe -p 51214 -c -s -b10</timer>žÊ/€/�\n\nThese processes all spawn instances of Console Host (conhost.exe) with the 0x4 flag, like `C:\\Windows\\system32\\conhost.exe 0x4`.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/22",
+        "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
+        "tags": ["windows", "ivanti"]
+      },
+      {
+        "id": 17,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+				"preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "name": "SentinelOne",
+        "description": "A legitimate PowerShell script associated with SentinelOne includes encoded PowerShell, AMSI bypass encoding, as well as strings for offensive security commands such as `Invoke-Mimikatz`. If running another security solution—like Defender—it may flag this SentinelOne legitimate PowerShell activity as malicious.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/24",
+        "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
+        "tags": ["sentinelone", "powershell"]
       }
 ]

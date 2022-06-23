@@ -49,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    hyphens: manual;
   }
 
   .tagline {

@@ -3,6 +3,7 @@ import { useRoute } from "vue-router"
 import type { WtfBin } from "@/interfaces/WtfBin"
 import TagContainer from "@/components/TagContainer.vue"
 import { wtfBinStore } from "@/stores/wtfbins";
+import { Marked } from '@ts-stack/markdown';
 
 const route = useRoute();
 const store = wtfBinStore();
@@ -23,7 +24,8 @@ console.log(binId);
                 <b>Contributed By:</b>
                 {{ wtfbin.contributor }}
             </p>
-            <p>{{ wtfbin.description }}</p>
+            <div class="markdown" v-html="Marked.parse(wtfbin.description)"></div>
+            <img v-if="wtfbin.imageURL != ''" :src="wtfbin.imageURL" />
             <footer>
                 <a v-bind:href="wtfbin.documentation">Documentation</a>
                 <TagContainer :tags="wtfbin.tags" :add-tag="() => { }" />
@@ -45,6 +47,7 @@ console.log(binId);
     max-width: 60%;
     min-width: 60%;
     font-weight: 400;
+    hyphens: manual;
     /* transition: box-shadow .3s; */
     box-shadow: 1px 1px 3px black;
 }
@@ -57,6 +60,12 @@ h3 {
     margin: 0;
 }
 
+.bin-item img {
+    width: 50%;
+    display: block; 
+    margin: auto;
+}
+
 @media screen and (max-width: 1025px) {
     .bin-item {
         max-width: 90%;
@@ -66,13 +75,18 @@ h3 {
     }
 }
 
-/* @media screen and (max-width: 700px) {
-    .bin-item {
+@media screen and (max-width: 700px) {
+    /* .bin-item {
         flex-direction: column;
         max-width: 90%;
         min-width: 90%;
         margin-left: auto;
         margin-right: auto;
+    } */
+    .bin-item img {
+        width: 80%;
+        display: block; 
+        margin: auto;
     }
-} */
+}
 </style>

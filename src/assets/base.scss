@@ -8,14 +8,15 @@
 body {
   background: rgb(41, 41, 41);
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   font-family:'Open Sans', sans-serif;
+  hyphens: auto;
 }
 
 h1 {
   text-align: center;
   font-family: "SportsNight", Courier, monospace;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 1rem;
   font-weight: 500;
   color: magenta;
@@ -26,9 +27,16 @@ a {
 }
 
 nav {
+  font-size: 1.3rem;
   padding: 0px 10px;
 }
 
 nav a {
   margin-right: 1rem;
+}
+
+code {
+  color: magenta;
+  background: rgb(41, 41, 41);
+  padding: 3px;
 }
