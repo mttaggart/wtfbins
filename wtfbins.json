@@ -158,5 +158,15 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/22",
         "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
         "tags": ["windows", "ivanti"]
+      },
+      {
+        "id": 17,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+				"preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "name": "SentinelOne",
+        "description": "A legitimate PowerShell script associated with SentinelOne includes encoded PowerShell, AMSI bypass encoding, as well as strings for offensive security commands such as `Invoke-Mimikatz`. If running another security solution—like Defender—it may flag this SentinelOne legitimate PowerShell activity as malicious.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/24",
+        "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
+        "tags": ["sentinelone", "powershell"]
       }
 ]
