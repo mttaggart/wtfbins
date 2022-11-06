@@ -182,12 +182,22 @@
       {
         "id": 19,
         "contributor": "Micah Babinski (@mbabinsky)",
-        "preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "preview": "An Android wireless security app queries TOR sites, triggering network alerts.",
         "name": "Samsung MobileWips",
         "description": "Samsung MobileWips (presumably a Wireless Intrusion Prevention System) is a default system app on certain Android OS versions. It has been observed making DNS requests to google.com.onion, which will trigger network/DNS-related alerts, such as the Sigma rule [Query Tor Onion Address](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_tor_onion.yml). This domain does not resolve to an IP address, and is not accessible via Tor. It appears to have been added as some sort of DNS check by an Android developer with poor taste!",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/27",
         "imageURL": "",
         "tags": ["android", "tor"]
+      },
+      {
+        "id": 20,
+        "contributor": "Dray Agha (@purp1ew0lf)",
+        "preview": "ArcGIS joins the ranks of apps asking the age-old question: whoami?",
+        "name": "ArcGISPortal.exe",
+        "description": "`ArcGISPortal.exe` runs `whoami.exe`.\nI know other Defenders have been [caught out](https://twitter.com/MikeDaniels00/status/1407383747985653769) by this weird activity. But, ArcGIS spawning whoami is completely legitimate and authorised activity. Huntress telemetry shows ~60,000 in the last 15 hours. I would advice adding this very specific activity to an ignore list, so it does not trigger a detection.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/28",
+        "imageURL": "https://user-images.githubusercontent.com/44196051/190622843-c9a71b04-492f-4634-9ecc-5cae6e04fd06.png",
+        "tags": ["arcgis", "windows", "whoami"]
       }
       
 ]
