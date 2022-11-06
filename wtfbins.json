@@ -168,5 +168,16 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/24",
         "imageURL": "https://user-images.githubusercontent.com/44196051/175350006-80b3e74b-1626-4b51-8ec2-e0fc8ada5ed1.png",
         "tags": ["sentinelone", "powershell"]
+      },
+      {
+        "id": 18,
+        "contributor": "Umair Qamar (@umairq_)",
+        "preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "name": "PsExec v2.30",
+        "description": "PsExec v2.30 client now drops a `.key` into file protected with an administrator-only security descriptor with a name formatted as `PSEXEC-.key`. This behavior is similar to a ransomware dropping a key file. Hive Ransomware, for example is known for dropping `.key` files.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/25",
+        "imageURL": "https://user-images.githubusercontent.com/12873319/182495880-881085f8-6c71-41f0-9277-06942bd824a8.png",
+        "tags": ["windows", "powershell"]
       }
+      
 ]
