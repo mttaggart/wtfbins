@@ -171,13 +171,13 @@
       },
       {
         "id": 18,
-        "contributor": "Umair Qamar (@umairq_)",
+        "contributor": "Luke Humberdross (@ukejjh)",
         "preview": "A SentinelOne PowerShell script contains malicious indicators.",
-        "name": "PsExec v2.30",
-        "description": "PsExec v2.30 client now drops a `.key` into file protected with an administrator-only security descriptor with a name formatted as `PSEXEC-.key`. This behavior is similar to a ransomware dropping a key file. Hive Ransomware, for example is known for dropping `.key` files.",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/25",
-        "imageURL": "https://user-images.githubusercontent.com/12873319/182495880-881085f8-6c71-41f0-9277-06942bd824a8.png",
-        "tags": ["windows", "powershell"]
+        "name": "Snow Inventory Agent for Windows",
+        "description": "Snow Inventory Agent for Windows (`snowagent.exe`) runs PowerShell which resembles shellcode (bindshell)\n\n* `powershell.exe -command`\n* `Invoke-Expression`\n* byte arrays\n* string encoding operations\n* pipes.",
+        "documentation": "https://stackoverflow.com/questions/60503948/is-this-code-a-keylogger-what-does-it-do/65027626#65027626",
+        "imageURL": "https://user-images.githubusercontent.com/46994024/187198158-949af632-82ae-4211-a8db-fadbcec4962d.png",
+        "tags": ["windows", "snow", "powershell"]
       }
       
 ]
