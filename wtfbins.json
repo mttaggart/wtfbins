@@ -172,12 +172,22 @@
       {
         "id": 18,
         "contributor": "Luke Humberdross (@ukejjh)",
-        "preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "preview": "Snow Inventory Agent for Window runs some incredibly sketch PowerShell.",
         "name": "Snow Inventory Agent for Windows",
         "description": "Snow Inventory Agent for Windows (`snowagent.exe`) runs PowerShell which resembles shellcode (bindshell)\n\n* `powershell.exe -command`\n* `Invoke-Expression`\n* byte arrays\n* string encoding operations\n* pipes.",
         "documentation": "https://stackoverflow.com/questions/60503948/is-this-code-a-keylogger-what-does-it-do/65027626#65027626",
         "imageURL": "https://user-images.githubusercontent.com/46994024/187198158-949af632-82ae-4211-a8db-fadbcec4962d.png",
         "tags": ["windows", "snow", "powershell"]
+      },
+      {
+        "id": 19,
+        "contributor": "Micah Babinski (@mbabinsky)",
+        "preview": "A SentinelOne PowerShell script contains malicious indicators.",
+        "name": "Samsung MobileWips",
+        "description": "Samsung MobileWips (presumably a Wireless Intrusion Prevention System) is a default system app on certain Android OS versions. It has been observed making DNS requests to google.com.onion, which will trigger network/DNS-related alerts, such as the Sigma rule [Query Tor Onion Address](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_tor_onion.yml). This domain does not resolve to an IP address, and is not accessible via Tor. It appears to have been added as some sort of DNS check by an Android developer with poor taste!",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/27",
+        "imageURL": "",
+        "tags": ["android", "tor"]
       }
       
 ]
