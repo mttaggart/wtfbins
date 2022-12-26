@@ -1,0 +1,22 @@
+h3.tagContainer {
+    font-size: 1rem;
+}
+
+ul.tagContainer {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wtfBinTag {
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0.2rem;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background: rgb(41, 41, 41);
+}
+.wtfBinTag:hover {
+    color: magenta;
+    cursor: pointer;
+}
