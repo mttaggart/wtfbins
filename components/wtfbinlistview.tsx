@@ -40,7 +40,7 @@ export default function WtfBinListView({ wtfBins, tagFilter, addTagFilter, textF
     ))
 
     return (
-        <ul>
+        <ul className={styles.binContainer}>
             {
                 filteredBins.map((wtfBin: WtfBin) => (
                     <li key={wtfBin.name} className={styles.binItem}>

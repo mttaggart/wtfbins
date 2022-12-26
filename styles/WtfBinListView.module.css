@@ -31,3 +31,22 @@
         margin-right: auto;
     }
 }
+
+.binContainer {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    hyphens: manual;
+  }
+  .tagline {
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 700px) {
+    .binContainer {
+      flex-direction: column;
+    }
+  }
