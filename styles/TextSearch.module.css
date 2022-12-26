@@ -1,7 +1,7 @@
 .searchForm {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     vertical-align: middle;
-    padding: 0px 10px;
+    padding: 1rem;
 }
 .searchForm label {
     margin-right: 1rem;
@@ -21,8 +21,13 @@
 @media screen and (min-width: 700px) {
     .searchForm input {
         display: block;
-        width: 66%;
+        width: 98%;
     }
+
+    .searchForm {
+        padding: 0rem 1rem;
+    }
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -33,9 +38,10 @@
 }
 
 @media screen and (max-width: 700px) {
+
     .searchForm input {
         display: block;
-        width: 98%;
+        width: 100%;
     }
 
     .searchForm label {
