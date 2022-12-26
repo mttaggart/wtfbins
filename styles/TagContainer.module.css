@@ -1,8 +1,8 @@
-h3.tagContainer {
+.tagContainer h3 {
     font-size: 1rem;
 }
 
-ul.tagContainer {
+.tagContainer ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;

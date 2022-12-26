@@ -6,25 +6,27 @@ interface AppProps {
 }
 
 const ActiveTagContainer = ({ tags, removeTagFilter }: AppProps) => (
+    tags.length == 0 ? <></> :
     <>
         <div>
             <h4>
                 Active Tags
             </h4>
         </div>
-        <ul>
-            {
-                tags.map((t: string, idx: number) => (
-                    <li 
-                        key={idx}
-                        className={styles.activeTag}
-                        onClick={() => removeTagFilter(t)}
-                    >
-                        {t}
-                    </li>
-                ))
-            }
-        </ul>
+        <div className={styles.activeTag}>
+            <ul>
+                {
+                    tags.map((t: string, idx: number) => (
+                        <li 
+                            key={idx}
+                            onClick={() => removeTagFilter(t)}
+                        >
+                            {t} [x]
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
     </>
 )
 

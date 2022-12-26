@@ -1,9 +1,9 @@
-ul.activeTag {
+.activeTag ul {
     padding: 0;
     display: flex;
 }
 
-.activeTag {
+.activeTag li{
     font-size: 0.9rem;
     list-style: none;
     margin: 0.2rem;
