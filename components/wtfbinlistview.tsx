@@ -40,6 +40,9 @@ export default function WtfBinListView({ wtfBins, tagFilter, addTagFilter, textF
     ))
 
     return (
+        filteredBins.length == 0 ? 
+            <p>I got no bins for you!</p>
+        :
         <ul className={styles.binContainer}>
             {
                 filteredBins.map((wtfBin: WtfBin) => (
