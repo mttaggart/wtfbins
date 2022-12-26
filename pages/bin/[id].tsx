@@ -1,11 +1,17 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { AppProps } from 'next/app';
 import Layout from '../../components/layout';
 import { WtfBin } from "../../interfaces/WtfBin";
 import styles from "../../styles/WtfBinDetailView.module.css";
+import TagContainer from '../../components/tagcontainer';
+
+const wtfBinsUrl = "https://raw.githubusercontent.com/mttaggart/wtfbins/main/wtfbins.json";
+
+interface AppProps {
+    wtfBin: WtfBin,
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const wtfBinsData = await fetch("https://raw.githubusercontent.com/mttaggart/wtfbins/main/wtfbins.json");
+    const wtfBinsData = await fetch(wtfBinsUrl);
     const wtfBins: WtfBin[] = await wtfBinsData.json();
     return {
         paths: wtfBins.map(wtfBin => ({
@@ -16,10 +22,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({params}) => {
-    const wtfBinsData = await fetch("https://raw.githubusercontent.com/mttaggart/wtfbins/main/wtfbins.json");
+    const wtfBinsData = await fetch(wtfBinsUrl);
     const wtfBins: WtfBin[] = await wtfBinsData.json();
     const wtfBin =  wtfBins.filter((wtfBin: WtfBin) => (
-        wtfBin.id.toString() == params.id
+        wtfBin.id.toString() == params?.id
     ))[0];
     return {
         props: {
@@ -28,7 +34,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     }
 }
 
-export default function WtfBinDetailView({wtfBin}) {
+export default function WtfBinDetailView({wtfBin}: AppProps) {
     return (
         <Layout>
         <li className={styles.binItem}>
@@ -39,11 +45,11 @@ export default function WtfBinDetailView({wtfBin}) {
             </p>
             <div className="markdown"></div>
             <a href={wtfBin.imageURL} target="_blank">
-                <img src={wtfBin.imageUrl}/>
+                <img src={wtfBin.imageURL}/>
             </a>
             <footer>
                 <a href={wtfBin.documentation}>Documentation</a>
-                {/* <TagContainer :tags="wtfbin.tags" :add-tag="() => { }" /> */}
+                <TagContainer tags={wtfBin.tags} addTagFilter={() => {}}/>
             </footer>
         </li>
         </Layout>
