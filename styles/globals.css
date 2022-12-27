@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+  font-family: "SportsNight";
+  src: url("./fonts/SFSportsNight.woff") format("woff");
+}
+
+body {
+  background: rgb(41, 41, 41);
+  color: #ffffff;
+  font-size: 16px;
+  font-family:'Open Sans', sans-serif;
+  hyphens: auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "SportsNight", "Open Sans", Courier, monospace;
+  font-size: 4rem;
+  margin: 1rem;
+  font-weight: 500;
+  color: magenta;
+}
+
+a {
+  color: white;
+}
+
+nav {
+  font-size: 1.3rem;
+  padding: 0px 10px;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+code {
+  color: magenta;
+  background: rgb(41, 41, 41);
+  padding: 3px;
+}
