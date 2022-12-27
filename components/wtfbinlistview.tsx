@@ -54,6 +54,9 @@ export default function WtfBinListView({ wtfBins, tagFilter, addTagFilter, textF
                         <p>
                             <b>Contributed By:</b> { wtfBin.contributor }
                         </p>
+                        <p>
+                            {wtfBin.preview}
+                        </p>
                         <div className="markdown" v-html="Marked.parse(wtfbin.preview)"></div>
                         <footer>
                             <a href={wtfBin.documentation}>Documentation</a>
