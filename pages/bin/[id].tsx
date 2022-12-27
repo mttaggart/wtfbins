@@ -1,8 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from '../../components/layout';
 import { WtfBin } from "../../interfaces/WtfBin";
 import styles from "../../styles/WtfBinDetailView.module.css";
 import TagContainer from '../../components/tagcontainer';
+import {marked} from "marked";
 
 const wtfBinsUrl = "https://raw.githubusercontent.com/mttaggart/wtfbins/main/wtfbins.json";
 
@@ -43,7 +44,11 @@ export default function WtfBinDetailView({wtfBin}: AppProps) {
             <p>
                 <b>Contributed By: </b>{ wtfBin.contributor }
             </p>
-            <div className="markdown"></div>
+            <div className="markdown"
+                dangerouslySetInnerHTML={{__html: marked.parse(wtfBin.description)}}
+            >
+                
+            </div>
             <a href={wtfBin.imageURL} target="_blank">
                 <img src={wtfBin.imageURL}/>
             </a>
