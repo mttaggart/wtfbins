@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "SportsNight";
-  src: url("./fonts/SFSportsNight.woff") format("woff");
+  src: url("/fonts/SFSportsNight.woff") format("woff");
 }
 
 body {
