@@ -212,9 +212,9 @@
       {
         "id": 22,
         "contributor": "Petr Špaček (@pspacek)",
-        "preview": "McAfee Antivirus performs bizarre DNS lookups.",
+        "preview": "ESET Protection Suite performs bizarre DNS lookups.",
         "name": "ESET Protection Suite",
-        "description": "Various modules of ESET protection suite perform odd DNS lookups to subdomains of `e5.sk domain.`\n\nExample:\n\n```\nTXT? oa5jhh3yxkgu5kpwgnjmgk54pubqeaqbaeaq.a.e.e5.sk.\nTXT? wzxh7gqaszmunhqg3g5ouiiuwebqeaqbaeaq.a.e.e5.sk.\nTXT? xegjkvpuklfebhejqeve4mltsmbqeaqbaeaq.a.e.e5.sk.\nTXT? vscxkxbn55aelaru6a6y3dxznebqeaqbaeaq.a.e.e5.sk.\nTXT? dc5wtaihc6luvphgub6laccokebqeaqbaeaq.a.e.e5.sk.```",
+        "description": "Various modules of ESET protection suite (Antispam, Parental Controls, LiveGrid) perform odd DNS lookups to subdomains of `e5.sk domain.`\n\nExample:\n\n```\nTXT? oa5jhh3yxkgu5kpwgnjmgk54pubqeaqbaeaq.a.e.e5.sk.\nTXT? wzxh7gqaszmunhqg3g5ouiiuwebqeaqbaeaq.a.e.e5.sk.\nTXT? xegjkvpuklfebhejqeve4mltsmbqeaqbaeaq.a.e.e5.sk.\nTXT? vscxkxbn55aelaru6a6y3dxznebqeaqbaeaq.a.e.e5.sk.\nTXT? dc5wtaihc6luvphgub6laccokebqeaqbaeaq.a.e.e5.sk.```",
         "documentation": "https://support.eset.com/en/kb332-ports-and-addresses-required-to-use-your-eset-product-with-a-third-party-firewall",
         "imageURL": "",
         "tags": ["eset", "windows", "dns"]
