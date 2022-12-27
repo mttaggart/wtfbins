@@ -5,11 +5,11 @@ export default function About() {
         <div className="about">
             <h2>About</h2>
             <p>
-                The Red Team gets all the cool toys. Like <a href="https://gtfobins.github.io/">GTFOBins</a> and <a href="https://lolbas-project.github.io/">LOLBAS</a>. But what about the Blue team, huh? Where's their cool stuff?
+                The Red Team gets all the cool toys. Like <a href="https://gtfobins.github.io/">GTFOBins</a> and <a href="https://lolbas-project.github.io/">LOLBAS</a>. But what about the Blue team, huh? Where&apos;s their cool stuff?
             </p>
             <p>
                 <b>WTFBin(n):</b> a binary that behaves exactly 
-                like malware, except, somehow, it's not?
+                like malware, except, somehow, it&apos;s not?
             </p>
             <p>
                 This project aims to catalogue

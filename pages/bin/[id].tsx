@@ -49,7 +49,7 @@ export default function WtfBinDetailView({wtfBin}: AppProps) {
             >
                 
             </div>
-            <a href={wtfBin.imageURL} target="_blank">
+            <a href={wtfBin.imageURL} target="_blank" rel="noreferrer">
                 <img src={wtfBin.imageURL}/>
             </a>
             <footer>
