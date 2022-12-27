@@ -25,9 +25,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({params}) => {
     const wtfBinsData = await fetch(wtfBinsUrl);
     const wtfBins: WtfBin[] = await wtfBinsData.json();
-    const wtfBin =  wtfBins.filter((wtfBin: WtfBin) => (
+    const wtfBin =  wtfBins.find((wtfBin: WtfBin) => (
         wtfBin.id.toString() == params?.id
-    ))[0];
+    ));
     return {
         props: {
             wtfBin
