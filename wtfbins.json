@@ -234,7 +234,7 @@
         "contributor": "mttaggart",
         "preview": "Avast Antivirus attempts SSH connections to neighbor hosts",
         "name": "AvastSvc.exe",
-        "description": "During scans, `AvastSvc.exe` will attempt to connect to neighboring IP addresses over SSH. Users such as `FakeDomain\FakeUser` will be used, as well as blank users/null SIDs.",
+        "description": "During scans, `AvastSvc.exe` will attempt to connect to neighboring IP addresses over SSH. Users such as `FakeDomain\\FakeUser` will be used, as well as blank users/null SIDs.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/38",
         "imageURL": "https://user-images.githubusercontent.com/6811816/216263621-916cd753-bca5-4c46-bca2-54addd7a26a4.png",
         "tags": ["avast", "windows", "ssh"] 
