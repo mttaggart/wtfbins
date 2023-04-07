@@ -234,9 +234,49 @@
         "contributor": "mttaggart",
         "preview": "Avast Antivirus attempts SSH connections to neighbor hosts",
         "name": "AvastSvc.exe",
-        "description": "During scans, `AvastSvc.exe` will attempt to connect to neighboring IP addresses over SSH. Users such as `FakeDomain\FakeUser` will be used, as well as blank users/null SIDs.",
+        "description": "During scans, `AvastSvc.exe` will attempt to connect to neighboring IP addresses over SSH. Users such as `FakeDomain\\FakeUser` will be used, as well as blank users/null SIDs.",
         "documentation": "https://github.com/mttaggart/wtfbins/issues/38",
         "imageURL": "https://user-images.githubusercontent.com/6811816/216263621-916cd753-bca5-4c46-bca2-54addd7a26a4.png",
         "tags": ["avast", "windows", "ssh"] 
+      },
+      {
+        "id": 25,
+        "contributor": "Bumbucha",
+        "preview": "SenseNDR is not shy about base64",
+        "name": "SenseNdr.exe",
+        "description": "SenseNDR, a component of [Microsoft Defender for Endpoint](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/device-discovery?view=o365-worldwide), encodes data for transmission in massive base64 chunks.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/20",
+        "imageURL": "https://user-images.githubusercontent.com/100836936/163134741-8cde713a-292d-4a8a-a412-eecb5d068883.png",
+        "tags": ["microsoft", "windows", "defender"] 
+      },
+      {
+        "id": 26,
+        "contributor": "Biffalo",
+        "preview": "Trend Micro Agent runs `whoami.exe`",
+        "name": "HostedAgent.exe",
+        "description": "Trend Micro WFBS Agent runs whoami.exe regularly as system for reasons unknown.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/37",
+        "imageURL": "https://user-images.githubusercontent.com/26933099/214572603-5691a8d4-b254-4c79-b18c-e0a59e366eff.png",
+        "tags": ["trendmicro", "windows", "whoami"] 
+      },
+      {
+        "id": 27,
+        "contributor": "Chris Beckett (@cbecks_2)",
+        "preview": "iManage Document Protection creates random sus files",
+        "name": "iManage Document Protection",
+        "description": "Behavior Description: When Office documents are protected by iManage, upon opening them they create script files in `%TEMP%` with a randomly generated file extension (such as `.hta`, `.sct`, `.inf`, `.cpl`, `.wsf`, etc.). This happens because iManage implements the `Path.GetRandomFileName` Method to handle this behavior. So while most instances result in files that look like `x191krbu.idj`, sometimes they end up being written like `x191krbu.hta` which likely will wreak havoc on a good defender's SIEM rules.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/39",
+        "imageURL": "https://user-images.githubusercontent.com/33350823/217361838-f14083c1-93f5-4456-afcf-1086deb69eec.png",
+        "tags": ["imanage", "windows"] 
+      },
+      {
+        "id": 28,
+        "contributor": "rcegan",
+        "preview": "Azure Conected Machine Agent runs b64 PowerShell",
+        "name": "`gc_worker.exe`",
+        "description": "The Azure Connected Machine Agent spawns a process that runs encoded Powershell strings. Triggers when the agent downloads new policies from Azure.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/41",
+        "imageURL": "https://user-images.githubusercontent.com/5835816/219515022-a81fc349-a045-4c20-961a-0fd1f0c57437.png",
+        "tags": ["azure", "windows", "powershell"] 
       }
 ]
