@@ -238,5 +238,15 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/38",
         "imageURL": "https://user-images.githubusercontent.com/6811816/216263621-916cd753-bca5-4c46-bca2-54addd7a26a4.png",
         "tags": ["avast", "windows", "ssh"] 
-      }
+      },
+      {
+        "id": 25,
+        "contributor": "Bumbucha",
+        "preview": "SenseNDR is not shy about base64",
+        "name": "SenseNdr.exe",
+        "description": "SenseNDR, a component of [Microsoft Defender for Endpoint](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/device-discovery?view=o365-worldwide), encodes data for transmission in massive base64 chunks.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/20",
+        "imageURL": "https://user-images.githubusercontent.com/100836936/163134741-8cde713a-292d-4a8a-a412-eecb5d068883.png",
+        "tags": ["microsoft", "windows", "defender"] 
+      } 
 ]
