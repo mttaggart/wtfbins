@@ -248,5 +248,16 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/20",
         "imageURL": "https://user-images.githubusercontent.com/100836936/163134741-8cde713a-292d-4a8a-a412-eecb5d068883.png",
         "tags": ["microsoft", "windows", "defender"] 
-      } 
+      },
+      {
+        "id": 26,
+        "contributor": "Biffalo",
+        "preview": "Trend Micro Agent runs `whoami.exe`",
+        "name": "HostedAgent.exe",
+        "description": "Trend Micro WFBS Agent runs whoami.exe regularly as system for reasons unknown.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/37",
+        "imageURL": "https://user-images.githubusercontent.com/26933099/214572603-5691a8d4-b254-4c79-b18c-e0a59e366eff.png",
+        "tags": ["trendmicro", "windows", "whoami"] 
+      }
+       
 ]
