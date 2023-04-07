@@ -268,5 +268,15 @@
         "documentation": "https://github.com/mttaggart/wtfbins/issues/39",
         "imageURL": "https://user-images.githubusercontent.com/33350823/217361838-f14083c1-93f5-4456-afcf-1086deb69eec.png",
         "tags": ["imanage", "windows"] 
+      },
+      {
+        "id": 28,
+        "contributor": "rcegan",
+        "preview": "Azure Conected Machine Agent runs b64 PowerShell",
+        "name": "`gc_worker.exe`",
+        "description": "The Azure Connected Machine Agent spawns a process that runs encoded Powershell strings. Triggers when the agent downloads new policies from Azure.",
+        "documentation": "https://github.com/mttaggart/wtfbins/issues/41",
+        "imageURL": "https://user-images.githubusercontent.com/5835816/219515022-a81fc349-a045-4c20-961a-0fd1f0c57437.png",
+        "tags": ["azure", "windows", "powershell"] 
       }
 ]
