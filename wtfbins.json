@@ -420,7 +420,7 @@
   {
     "id": 31,
     "contributor": "Micah Babinski (@mbabinski)",
-    "preview": "Nutanix Guest Tools Runs b64-encoded PowerShell",
+    "preview": "Nutanix Guest Tools runs b64-encoded PowerShell",
     "name": "Nutanix Guest Tools",
     "description": "Yet another base64-loving process. In this case, the encoded commands are also WMI PowerShell commands.",
     "documentation": "https://github.com/mttaggart/wtfbins/issues/46",
