@@ -1,90 +1,434 @@
 [
-    {
-        "id": 1,
-        "name": "CCM.exe (SCCM)",
-        "contributor": "mttaggart",
-        "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
-        "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
-        "tags": ["microsoft", "windows", "powershell"]
-      },
-      {
-        "id": 2,
-        "contributor": "mttaggart",
-        "name": "PanGpHip.exe",
-        "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
-        "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
-        "tags": ["paloalto", "vpn", "cmd", "whoami"]
-      },
-      {
-        "id": 3,
-        "contributor": "g1ng3rr00t",
-        "name": "Skype.exe",
-        "description": "It runs whoami because it's lost",
-        "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
-        "tags": ["microsoft", "whoami", "cmd"]
-      },
-      {
-        "id": 4,
-        "contributor": "HuskyHacks",
-        "name": "Nim Lang install binaries",
-        "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
-        "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
-        "tags": ["nim", "windows", "defender"]
-      },
-      {
-        "id": 5,
-        "contributor": "Ductape and Dreams",
-        "name": "Windows TCP Connections on High Ports",
-        "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
-        "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
-        "tags": ["network", "windows", "microsoft"]
-      },
-      {
-        "id": 6,
-        "contributor": "mttaggart",
-        "name": "Edge/Chromium Browsers",
-        "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
-        "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
-        "tags": ["chrome", "edge", "windows", "linux", "commandline"]
-      },
-      {
-        "id": 7,
-        "contributor": "mttaggart",
-        "name": "Windows Terminal",
-        "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
-        "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
-        "tags": ["windows", "microsoft", "commandline"]
-      },
-      {
-        "id": 8,
-        "contributor": "Dray Agha (@purp1ew0lf)",
-        "name": "Network Detective Data Collector (nddc.exe)",
-        "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
-        "tags": ["windows", "network", "impacket"]
-      },
-      {
-        "id": 9,
-        "contributor": "59e5aaf4",
-        "name": "Adobe Reader (reader_sl.exe)",
-        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
-        "tags": ["adobe", "windows", "commandline"]
-      },
-      {
-        "id": 10,
-        "contributor": "59e5aaf4",
-        "name": "Adobe Reader (reader_sl.exe)",
-        "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
-        "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
-        "tags": ["adobe", "windows", "commandline"]
-      },
-      {
-        "id": 11,
-        "contributor": "mttaggart",
-        "name": "Sophos Web Protection (sophosxl.net)",
-        "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
-        "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
-        "tags": ["sophos", "dns"]
-      }
+  {
+    "id": 1,
+    "name": "CCM.exe (SCCM)",
+    "contributor": "mttaggart",
+    "preview": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
+    "description": "Windows Config Manager CCM.exe runs b64-encoded powershell.",
+    "documentation": "https://docs.microsoft.com/en-us/mem/configmgr/apps/deploy-use/create-deploy-scripts",
+    "imageURL": "",
+    "tags": [
+      "microsoft",
+      "windows",
+      "powershell"
+    ]
+  },
+  {
+    "id": 2,
+    "contributor": "mttaggart",
+    "preview": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
+    "name": "PanGpHip.exe",
+    "description": "Palo Alto GP Firewall HIP check runs whoami.exe as SYSTEM.",
+    "documentation": "https://live.paloaltonetworks.com/t5/globalprotect-discussions/pan-gp-hip/td-p/423158",
+    "imageURL": "",
+    "tags": [
+      "paloalto",
+      "vpn",
+      "cmd",
+      "whoami"
+    ]
+  },
+  {
+    "id": 3,
+    "contributor": "g1ng3rr00t",
+    "preview": "It runs whoami because it's lost.",
+    "name": "Skype.exe",
+    "description": "It runs whoami because it's lost.",
+    "documentation": "https://answers.microsoft.com/en-us/skype/forum/all/skype-issues-after-update-from-82x-to-830/39b7f81a-2a97-4f0f-ac59-1cea5e5fc279",
+    "imageURL": "",
+    "tags": [
+      "microsoft",
+      "whoami",
+      "cmd"
+    ]
+  },
+  {
+    "id": 4,
+    "contributor": "HuskyHacks",
+    "preview": "The Nim language install binaries in certain versions trigger Windows Defender.",
+    "name": "Nim Lang install binaries",
+    "description": "The Nim language install binaries in certain versions trigger Windows Defender. These include nimble.exe, finish.exe, koch.exe, and other binaries that come packaged during a stock install of Nim.",
+    "documentation": "https://github.com/HuskyHacks/the-crown-defcon615/blob/main/notebooks/NimbleAVExcursion.ipynb",
+    "imageURL": "https://user-images.githubusercontent.com/57866415/160456488-42e6a3e4-70f8-4ac2-99b4-75155749ea67.png",
+    "tags": [
+      "nim",
+      "windows",
+      "defender"
+    ]
+  },
+  {
+    "id": 5,
+    "contributor": "Ductape and Dreams",
+    "preview": "Windows uses random high service ports for a variety of functions.",
+    "name": "Windows TCP Connections on High Ports",
+    "description": "Windows uses random high service ports for a variety of functions. Without knowing this, these connections seem malicious but should be considered benign without a second source of suspicion.",
+    "documentation": "https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+    "imageURL": "",
+    "tags": [
+      "network",
+      "windows",
+      "microsoft"
+    ]
+  },
+  {
+    "id": 6,
+    "contributor": "mttaggart",
+    "preview": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious.",
+    "name": "Edge/Chromium Browsers",
+    "description": "Browsers based on Chromium will launch several sub-processes that look extremely suspicious, with command-line options like --utility and --utility-sub-type=unzip.mojom.Unzipper. Despite Google searches for these terms matching malware analysis reports, these are expected behaviors.",
+    "documentation": "https://szeged.github.io/sprocket/architecture_overview.html#:~:text=Utility%20process%20is%20created%20right,also%20deals%20with%20extension%20extraction.",
+    "imageURL": "",
+    "tags": [
+      "chrome",
+      "edge",
+      "windows",
+      "linux",
+      "commandline"
+    ]
+  },
+  {
+    "id": 7,
+    "contributor": "mttaggart",
+    "preview": "Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
+    "name": "Windows Terminal",
+    "description": "Upon launch, Windows Terminal runs wsl --list to find potential Linux profiles to add to its list.",
+    "documentation": "https://youtu.be/VvMn_zYP8Cw?t=11430",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "microsoft",
+      "commandline"
+    ]
+  },
+  {
+    "id": 8,
+    "contributor": "Dray Agha (@purp1ew0lf)",
+    "preview": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
+    "name": "Network Detective Data Collector (nddc.exe)",
+    "description": "The executable for Network Detective Data Collector displays false positive activity similar to Impacket's WMI/SMBexec.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/5",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "network",
+      "impacket"
+    ]
+  },
+  {
+    "id": 9,
+    "contributor": "59e5aaf4",
+    "preview": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+    "name": "Adobe Reader (reader_sl.exe)",
+    "description": "Adobe Reader for no reason starts a subprocess using the command line \"I run\".",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/7",
+    "imageURL": "",
+    "tags": [
+      "adobe",
+      "windows",
+      "commandline"
+    ]
+  },
+  {
+    "id": 10,
+    "contributor": "mttaggart",
+    "name": "Sophos Web Protection (sophosxl.net)",
+    "preview": "Sophos Web Protection, performs odd DNS lookups to sophosxl.net.",
+    "description": "Sophos Web Protection, for reasons surpassing understanding, performs DNS lookups using b64-encoded data as subdomains to sophosxl.net. This creates a gigantic amount of DNS queries, all of which look like data exfil, because technically they are.",
+    "documentation": "https://support.sophos.com/support/s/article/KB-000034570?language=en_US",
+    "imageURL": "",
+    "tags": [
+      "sophos",
+      "dns"
+    ]
+  },
+  {
+    "id": 11,
+    "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+    "name": "LogMeIn.exe",
+    "preview": "LogMeIn runs `avfilter.js` via cscript to check what AV is running on your system.",
+    "description": " LogMeIn runs \"avfilter.js\" via cscript to check what AV is running on your system for some godawful reason. As far as I am aware, they have yet to provide any substantial documentation or reasoning as to why.",
+    "documentation": "https://community.logmein.com/t5/LogMeIn-Central-Discussions/Why-AVfilter-js-running-in-my-logMein-client-machines/td-p/255466",
+    "imageURL": "",
+    "tags": [
+      "logmein",
+      "windows",
+      "cscript"
+    ]
+  },
+  {
+    "id": 12,
+    "contributor": "t3chn1qu3_/WSP (@t3chn1qu3_WSP)",
+    "name": "RingCentral.exe",
+    "preview": "Binary installs deep in AppData, drops a setDefaultAppByProtcol.vbs script.",
+    "description": "Binary installs deep in AppData, drops a setDefaultAppByProtcol.vbs script, that is then executed to query/create/modify registry entries by running cmd.exe to call cscript //NoLogo and then finally run the vbscript.",
+    "documentation": "https://github.com/WidespreadPandemic/RingCentral_WTFBin",
+    "imageURL": "",
+    "tags": [
+      "ringcentral",
+      "windows",
+      "cscript",
+      "vbscript"
+    ]
+  },
+  {
+    "id": 13,
+    "contributor": "Dray Agha (@purp1ew0lf)",
+    "name": "Bloodhound.exe",
+    "preview": "Silver Bullet Technology's Ranger runs an executable called `Bloodhound.exe`",
+    "description": "Silver Bullet Technology's Ranger runs an executable called Bloodhound.exe (C:\\Program Files (x86)\\Silver Bullet Technology\\Ranger\\Logging\\Bloodhound.exe). It doesn't appear to be SpecterOps's Bloodhound tool for Active Directory mapping, it merely shares a namesake.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/14",
+    "imageURL": "https://user-images.githubusercontent.com/44196051/159670129-8dd8eb03-3388-493f-bff3-e483a227c10f.png",
+    "tags": [
+      "windows",
+      "silverbullet",
+      "bloodhound"
+    ]
+  },
+  {
+    "id": 14,
+    "contributor": "Matt Anderson",
+    "name": "Noregon Fake Windows Components",
+    "preview": "Named after legitimate Windows binaries, in the wrong location.",
+    "description": "Named after legitimate Windows binaries, in the wrong location. They were spawned in succession from `C:\\Program Files (x86)\\noregon\\JPRO diagnostics\\Fleets.exe` > `C:\\Program Files (x86)\\noregon\\JPRO diagnostics_jpro_start.exe` > `C:\\Users\\AppData\\Local\\icsys.icn.exe > c:\\Windows\\System\\explorer.exe` > `C:\\Windows\\System\\spoolsv.exe` > `C:\\Windows\\System\\svchost.exe`.\n\nThe files are custom binaries compiled with Visual Basic. They appear to be changed/created regularly as the hashes seem to change often.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/16",
+    "imageURL": "https://user-images.githubusercontent.com/75185144/160493606-185e1e80-77d9-48d5-bf5e-536a6e282201.png",
+    "tags": [
+      "windows",
+      "noregon",
+      "fake"
+    ]
+  },
+  {
+    "id": 15,
+    "contributor": "g1ng3rr00t",
+    "preview": "`AGMService.exe` opens and reads from the LSASS process",
+    "name": "Adobe Genuine Monitor Service",
+    "description": "Adobe Genuine Monitor Service (`AGMService.exe`) opens and reads from the LSASS process. While this access is legitimate, it can create false positives for process access alerts.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/17",
+    "imageURL": "https://user-images.githubusercontent.com/89753991/160697979-7c579248-a718-4a64-8936-b18384612789.png",
+    "tags": [
+      "windows",
+      "adobe",
+      "lsass"
+    ]
+  },
+  {
+    "id": 16,
+    "contributor": "Micah Babinski (mbabinski)",
+    "preview": "Fragmented, seemingly-random strings containing special unicode characters.",
+    "name": "Ivanti Endpoint Manager",
+    "description": "The command-line arguments for the exes listed below occassionally contain fragmented, seemingly-random strings containing special unicode characters, what looks like bits of HTML or XML tags, and/or URL-enocoded strings. For example:\n* LDdrives.exe -p 51205 -c -s -b5D€\u001aCv\n* LDdrives.exe -p 51205 -c -s -b8µq\n* LDdrives.exe -p 51205 -c -s \"-b8</timer>¶(+N& \"\n* LDmemory.exe -p 51207 -c -s \"-b32164/><key nam=ÂgËo�\"\n* LDnetwork.exe -p 51214 -c -s -b10</timer>žÊ/€/�\n\nThese processes all spawn instances of Console Host (conhost.exe) with the 0x4 flag, like `C:\\Windows\\system32\\conhost.exe 0x4`.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/22",
+    "imageURL": "https://user-images.githubusercontent.com/63474467/164298924-0a9195bb-7ce1-4770-8674-a4a6380458cf.jpg",
+    "tags": [
+      "windows",
+      "ivanti"
+    ]
+  },
+  {
+    "id": 17,
+    "contributor": "Dray Agha (@purp1ew0lf)",
+    "preview": "A SentinelOne PowerShell script contains malicious indicators.",
+    "name": "SentinelOne",
+    "description": "A legitimate PowerShell script associated with SentinelOne includes encoded PowerShell, AMSI bypass encoding, as well as strings for offensive security commands such as `Invoke-Mimikatz`. If running another security solution—like Defender—it may flag this SentinelOne legitimate PowerShell activity as malicious.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/24",
+    "imageURL": "https://user-images.githubusercontent.com/44196051/175350006-80b3e74b-1626-4b51-8ec2-e0fc8ada5ed1.png",
+    "tags": [
+      "sentinelone",
+      "powershell"
+    ]
+  },
+  {
+    "id": 18,
+    "contributor": "Luke Humberdross (@ukejjh)",
+    "preview": "Snow Inventory Agent for Window runs some incredibly sketch PowerShell.",
+    "name": "Snow Inventory Agent for Windows",
+    "description": "Snow Inventory Agent for Windows (`snowagent.exe`) runs PowerShell which resembles shellcode (bindshell)\n\n* `powershell.exe -command`\n* `Invoke-Expression`\n* byte arrays\n* string encoding operations\n* pipes.",
+    "documentation": "https://stackoverflow.com/questions/60503948/is-this-code-a-keylogger-what-does-it-do/65027626#65027626",
+    "imageURL": "https://user-images.githubusercontent.com/46994024/187198158-949af632-82ae-4211-a8db-fadbcec4962d.png",
+    "tags": [
+      "windows",
+      "snow",
+      "powershell"
+    ]
+  },
+  {
+    "id": 19,
+    "contributor": "Micah Babinski (@mbabinski)",
+    "preview": "An Android wireless security app queries TOR sites, triggering network alerts.",
+    "name": "Samsung MobileWips",
+    "description": "Samsung MobileWips (presumably a Wireless Intrusion Prevention System) is a default system app on certain Android OS versions. It has been observed making DNS requests to google.com.onion, which will trigger network/DNS-related alerts, such as the Sigma rule [Query Tor Onion Address](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/dns_query/dns_query_win_tor_onion.yml). This domain does not resolve to an IP address, and is not accessible via Tor. It appears to have been added as some sort of DNS check by an Android developer with poor taste!",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/27",
+    "imageURL": "",
+    "tags": [
+      "android",
+      "tor"
+    ]
+  },
+  {
+    "id": 20,
+    "contributor": "Dray Agha (@purp1ew0lf)",
+    "preview": "ArcGIS joins the ranks of apps asking the age-old question: whoami?",
+    "name": "ArcGISPortal.exe",
+    "description": "`ArcGISPortal.exe` runs `whoami.exe`.\nI know other Defenders have been [caught out](https://twitter.com/MikeDaniels00/status/1407383747985653769) by this weird activity. But, ArcGIS spawning whoami is completely legitimate and authorised activity. Huntress telemetry shows ~60,000 in the last 15 hours. I would advice adding this very specific activity to an ignore list, so it does not trigger a detection.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/28",
+    "imageURL": "https://user-images.githubusercontent.com/44196051/190622843-c9a71b04-492f-4634-9ecc-5cae6e04fd06.png",
+    "tags": [
+      "arcgis",
+      "windows",
+      "whoami"
+    ]
+  },
+  {
+    "id": 21,
+    "contributor": "Petr Špaček (@pspacek)",
+    "preview": "McAfee Antivirus performs bizarre DNS lookups.",
+    "name": "McAfee Antivirus",
+    "description": "Various McAfee performs odd DNS lookups to subdomains of `avqs.mcafee.com` and `avts.mcafee.com` domains.\nExample:\n\n```A? a-0.19-a3000081.c930082.1838.11b0.2fca.400.0.n7dbrrk87wfrd2gm1699ghv8hi.avqs.mcafee.com.\nA? 13-0.19-b3000081.30483.1838.11b4.2fca.210.0.jsdhk1cfzc4r9jrf2j214zd4gi.avqs.mcafee.com.\nA? 13-0.19-b3000081.a0082.1838.11b4.2fca.210.0.4fk9i42wg1l1rlfrgvlpsv7a9q.avqs.mcafee.com.\nA? 13-0.19-b3000081.60082.1838.11b4.2fca.210.0.uqnk1rubb52k9unam8919hj6wq.avqs.mcafee.com.\nA? 13-0.19-b3000081.8a70082.1838.11b4.2fca.210.0.bklpbm2z81gc949wv8qr3spea6.avqs.mcafee.com.\nA? 13-0.19-b3000081.60082.1838.11b4.2fca.210.0.nuthnwa7a65azzqaij3t43ts1i.avqs.mcafee.com.\nA? 13-0.19-b3000081.60082.1838.11b4.2fca.210.0.lqmag7m5gq7i6h16d6emea6fwv.avqs.mcafee.com.\nA? 13-0.19-b3000081.10082.1838.11b4.2fca.210.0.gkmrckah4wcjc96fvbratcmn26.avqs.mcafee.com.\nA? 14-0.19-b3000489.2.1644.95b.3ea3.210.0.7ahnlkt1uiliactc2cfvqqnjcv.avts.mcafee.com.```",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/33",
+    "imageURL": "",
+    "tags": [
+      "mcafee",
+      "windows",
+      "dns"
+    ]
+  },
+  {
+    "id": 22,
+    "contributor": "Petr Špaček (@pspacek)",
+    "preview": "ESET Protection Suite performs bizarre DNS lookups.",
+    "name": "ESET Protection Suite",
+    "description": "Various modules of ESET protection suite (Antispam, Parental Controls, LiveGrid) perform odd DNS lookups to subdomains of `e5.sk domain.`\n\nExample:\n\n```\nTXT? oa5jhh3yxkgu5kpwgnjmgk54pubqeaqbaeaq.a.e.e5.sk.\nTXT? wzxh7gqaszmunhqg3g5ouiiuwebqeaqbaeaq.a.e.e5.sk.\nTXT? xegjkvpuklfebhejqeve4mltsmbqeaqbaeaq.a.e.e5.sk.\nTXT? vscxkxbn55aelaru6a6y3dxznebqeaqbaeaq.a.e.e5.sk.\nTXT? dc5wtaihc6luvphgub6laccokebqeaqbaeaq.a.e.e5.sk.```",
+    "documentation": "https://support.eset.com/en/kb332-ports-and-addresses-required-to-use-your-eset-product-with-a-third-party-firewall",
+    "imageURL": "",
+    "tags": [
+      "eset",
+      "windows",
+      "dns"
+    ]
+  },
+  {
+    "id": 23,
+    "contributor": "Michael Weber \"mthrfcknruckus\" (@mjweber915)",
+    "preview": "EaseUS Partition Manager installs weird stuff to System32",
+    "name": "spaceman.exe",
+    "description": " The file is associated with EaseUS Partition Manager or Hard Drive Tools 2003 by TradeTouch.com. Aside from the odd name of the binary, other WTF behaviors include installing to system32 and creating scheduled tasks. These stand out when triaging in PowerShell using `Get-ScheduledTask | Select -Property Author`",
+    "documentation": "https://answers.microsoft.com/en-us/windows/forum/all/windows-10-spacemanexe/c60c4d6b-0bca-49e3-8054-68213efbd67a",
+    "imageURL": "https://user-images.githubusercontent.com/99111739/200188949-4c2e29e2-9a29-4603-ae4d-d0bf59dbf5ee.png",
+    "tags": [
+      "easeus",
+      "windows",
+      "scheduledtask"
+    ]
+  },
+  {
+    "id": 24,
+    "contributor": "mttaggart",
+    "preview": "Avast Antivirus attempts SSH connections to neighbor hosts",
+    "name": "AvastSvc.exe",
+    "description": "During scans, `AvastSvc.exe` will attempt to connect to neighboring IP addresses over SSH. Users such as `FakeDomain\\FakeUser` will be used, as well as blank users/null SIDs.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/38",
+    "imageURL": "https://user-images.githubusercontent.com/6811816/216263621-916cd753-bca5-4c46-bca2-54addd7a26a4.png",
+    "tags": [
+      "avast",
+      "windows",
+      "ssh"
+    ]
+  },
+  {
+    "id": 25,
+    "contributor": "Bumbucha",
+    "preview": "SenseNDR is not shy about base64",
+    "name": "SenseNdr.exe",
+    "description": "SenseNDR, a component of [Microsoft Defender for Endpoint](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/device-discovery?view=o365-worldwide), encodes data for transmission in massive base64 chunks.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/20",
+    "imageURL": "https://user-images.githubusercontent.com/100836936/163134741-8cde713a-292d-4a8a-a412-eecb5d068883.png",
+    "tags": [
+      "microsoft",
+      "windows",
+      "defender"
+    ]
+  },
+  {
+    "id": 26,
+    "contributor": "Biffalo",
+    "preview": "Trend Micro Agent runs `whoami.exe`",
+    "name": "HostedAgent.exe",
+    "description": "Trend Micro WFBS Agent runs whoami.exe regularly as system for reasons unknown.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/37",
+    "imageURL": "https://user-images.githubusercontent.com/26933099/214572603-5691a8d4-b254-4c79-b18c-e0a59e366eff.png",
+    "tags": [
+      "trendmicro",
+      "windows",
+      "whoami"
+    ]
+  },
+  {
+    "id": 27,
+    "contributor": "Chris Beckett (@cbecks_2)",
+    "preview": "iManage Document Protection creates random sus files",
+    "name": "iManage Document Protection",
+    "description": "Behavior Description: When Office documents are protected by iManage, upon opening them they create script files in `%TEMP%` with a randomly generated file extension (such as `.hta`, `.sct`, `.inf`, `.cpl`, `.wsf`, etc.). This happens because iManage implements the `Path.GetRandomFileName` Method to handle this behavior. So while most instances result in files that look like `x191krbu.idj`, sometimes they end up being written like `x191krbu.hta` which likely will wreak havoc on a good defender's SIEM rules.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/39",
+    "imageURL": "https://user-images.githubusercontent.com/33350823/217361838-f14083c1-93f5-4456-afcf-1086deb69eec.png",
+    "tags": [
+      "imanage",
+      "windows"
+    ]
+  },
+  {
+    "id": 28,
+    "contributor": "rcegan",
+    "preview": "Azure Conected Machine Agent runs b64 PowerShell",
+    "name": "gc_worker.exe",
+    "description": "The Azure Connected Machine Agent spawns a process that runs encoded Powershell strings. Triggers when the agent downloads new policies from Azure.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/41",
+    "imageURL": "https://user-images.githubusercontent.com/5835816/219515022-a81fc349-a045-4c20-961a-0fd1f0c57437.png",
+    "tags": [
+      "azure",
+      "windows",
+      "powershell"
+    ]
+  },
+  {
+    "id": 29,
+    "contributor": "ygil1234",
+    "preview": "Shared Folder to \"Everyone\" causes a Guest login attempt",
+    "name": "explorer.exe",
+    "description": "Sharing a Windows folder with `Everyone` permissions, will cause a failed logon of user `Guest`.",
+    "documentation": "https://learn.microsoft.com/en-us/answers/questions/224757/failed-type-3-logons-on-domain-workstation-by-gues#:~:text=4%3A56%20AM-,Hello%2C,-Thank%20you%20so",
+    "imageURL": "https://user-images.githubusercontent.com/63286048/218282880-7ccfb007-62b9-4bb5-9491-0fe84c236818.png",
+    "tags": [
+      "windows",
+      "explorer"
+    ]
+  },
+  {
+    "id": 30,
+    "contributor": "Adam Ponce (@adamcysec)",
+    "preview": "SenseIR.exe, a Windows Defender component, executes base64-encoded scripts",
+    "name": "explorer.exe",
+    "description": "Microsoft Defender Advanced Threat Protection uses SenseIR.exe to launch Powershell scripts that then uses .NET function `[System.IO.File]::Open()` to read another Powershell script into memory for execution. The second Powershell script executed has its parameters passed in as base64-encoded text.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/43",
+    "imageURL": "https://user-images.githubusercontent.com/94799223/233192738-3dab2430-23dc-40be-9a47-6305cab45ffb.png",
+    "tags": [
+      "windows",
+      "defender",
+      "base64"
+    ]
+  },
+  {
+    "id": 31,
+    "contributor": "Micah Babinski (@mbabinski)",
+    "preview": "Nutanix Guest Tools Runs b64-encoded PowerShell",
+    "name": "Nutanix Guest Tools",
+    "description": "Yet another base64-loving process. In this case, the encoded commands are also WMI PowerShell commands.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/46",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "nutanix",
+      "base64"
+    ]
+  }
 ]
