@@ -407,7 +407,7 @@
     "id": 30,
     "contributor": "Adam Ponce (@adamcysec)",
     "preview": "SenseIR.exe, a Windows Defender component, executes base64-encoded scripts",
-    "name": "explorer.exe",
+    "name": "SenseIR.exe",
     "description": "Microsoft Defender Advanced Threat Protection uses SenseIR.exe to launch Powershell scripts that then uses .NET function `[System.IO.File]::Open()` to read another Powershell script into memory for execution. The second Powershell script executed has its parameters passed in as base64-encoded text.",
     "documentation": "https://github.com/mttaggart/wtfbins/issues/43",
     "imageURL": "https://user-images.githubusercontent.com/94799223/233192738-3dab2430-23dc-40be-9a47-6305cab45ffb.png",
