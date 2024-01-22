@@ -420,7 +420,7 @@
   {
     "id": 31,
     "contributor": "Micah Babinski (@mbabinski)",
-    "preview": "Nutanix Guest Tools Runs b64-encoded PowerShell",
+    "preview": "Nutanix Guest Tools runs b64-encoded PowerShell",
     "name": "Nutanix Guest Tools",
     "description": "Yet another base64-loving process. In this case, the encoded commands are also WMI PowerShell commands.",
     "documentation": "https://github.com/mttaggart/wtfbins/issues/46",
@@ -429,6 +429,33 @@
       "windows",
       "nutanix",
       "base64"
+    ]
+  },
+  {
+    "id": 32,
+    "contributor": "Alex Watson (@konk)",
+    "preview": "Cisco Jabber writes system info to files",
+    "name": "Cisco Jabber",
+    "description": "`CiscoJabberPrt.exe` will pipe `ipconfig.exe /all`, `systeminfo.exe`, and `tasklist.exe` into a file named `Systeminfo.txt` inside of the User's `%TEMP%` folder.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/45",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "cisco",
+      "filewrite"
+    ]
+  },
+  {
+    "id": 33,
+    "contributor": "Matthew W (@0xDeadcell)",
+    "preview": "Windows runs a DLL function called SusRunTask",
+    "name": "Windows (Startupscan.dll)",
+    "description": "Windows executes a suspiciously named DLL export with a name of `SusRunTask`, and this DLL checks many various Scheduled Task and Autostart execution locations, such as Registry persistence locations and `C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\`, as well as spawning new processes that are not child processes.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/49",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "dll"
     ]
   }
 ]
