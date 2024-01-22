@@ -444,5 +444,18 @@
       "cisco",
       "filewrite"
     ]
+  },
+  {
+    "id": 33,
+    "contributor": "Matthew W (@0xDeadcell)",
+    "preview": "Windows runs a DLL function called SusRunTask",
+    "name": "Windows (Startupscan.dll)",
+    "description": "Windows executes a suspiciously named DLL export with a name of `SusRunTask`, and this DLL checks many various Scheduled Task and Autostart execution locations, such as Registry persistence locations and `C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\`, as well as spawning new processes that are not child processes.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/49",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "dll"
+    ]
   }
 ]
