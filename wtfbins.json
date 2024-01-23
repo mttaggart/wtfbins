@@ -460,7 +460,7 @@
   },
   {
     "id": 34,
-    "contributor": "Micah Babinski (@mbabinski)",
+    "contributor": "Micah Babinski (@mbabinski), William Rotchford",
     "preview": "IBM Storage Insights Data Collector Runs WMIC",
     "name": "IBM Storage Insights Data Collector",
     "description": "The data collector periodically runs a command like: `cmd.exe /c wmic process call create \"C:\\...\\datacollectorbin\\collectorSrvWatchDog.bat``\"\n\nThis may trigger detection rules geared towards T1047: Windows Management Instrumentation which look for `wmic.exe`` being used to covertly spawn processes.",
