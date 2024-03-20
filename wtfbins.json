@@ -476,7 +476,7 @@
     "id": 35,
     "contributor": "Thurein Oo",
     "preview": "Jetbrains IDE using WMI to query antivirus product",
-    "name": "JetBrains binaries and WMI",
+    "name": "JetBrains binaries invoke WMI",
     "description": "`idea64.exe` and `rider64.exe` from Jetbrains query the installed antivirus product in the exact same way that malicious programs do using the command:\n\n```bat\nwmic /namespace:\\\\root\\securitycenter2 path antivirusproduct get displayname,productstate\n```",
     "documentation": "https://rider-support.jetbrains.com/hc/en-us/community/posts/360010724079-Why-is-Rider-making-wmic-commands-to-get-AntiVirus-name-",
     "imageURL": "",
