@@ -512,5 +512,20 @@
       "cmd",
       "ibm"
     ]
-  }
+  },
+  {
+    "id": 38,
+    "contributor": "mttaggart",
+    "preview": "Greenbone OpenVAS runs WMIExec.py",
+    "name": "OpenVAS runs WMIExec",
+    "description": "When connecting to Windows hosts, OpenVAS will run impacket-wmiexec against the host. The resulting events look identical to a secretsdump run that you'd [hunt for](https://riccardoancarani.github.io/2020-05-10-hunting-for-impacket).",
+    "documentation": "https://github.com/greenbone/openvas-scanner/blob/308cefe338df888814b735d11302f4b7e258bdc3/nasl/nasl_smb.c#L367",
+    "imageURL": "https://private-user-images.githubusercontent.com/6811816/332151827-f948ecd8-de26-4ed2-8632-42fd6d7eb4fa.png",
+    "tags": [
+      "windows",
+      "impacket",
+      "greenbone",
+      "openvas"
+    ]
+  },
 ]
