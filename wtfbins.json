@@ -465,7 +465,7 @@
     "name": "IBM Storage Insights Data Collector",
     "description": "The data collector periodically runs a command like: `cmd.exe /c wmic process call create \"C:\\...\\datacollectorbin\\collectorSrvWatchDog.bat``\"\n\nThis may trigger detection rules geared towards T1047: Windows Management Instrumentation which look for `wmic.exe`` being used to covertly spawn processes.",
     "documentation": "https://www.ibm.com/support/pages/carbon-black-security-alert-executing-wmicexe",
-    "imageURL": "https://private-user-images.githubusercontent.com/63474467/298740012-2d9f6095-c020-4f93-86ed-6f3af6246125.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU5NzQ0MzUsIm5iZiI6MTcwNTk3NDEzNSwicGF0aCI6Ii82MzQ3NDQ2Ny8yOTg3NDAwMTItMmQ5ZjYwOTUtYzAyMC00ZjkzLTg2ZWQtNmYzYWY2MjQ2MTI1LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTIzVDAxNDIxNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQxYTdiYWFhYzNiYmNhMjBiZmYzYmQ1Y2ZkNjgwNTQ4YmRjOTJjYjljNThmODFiN2ZjZDljYTY2ZjA5ODgzNmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.aU9hPF1VtcpnoTFs7uO72daL2ikxhnyTTDJjEARPa68",
+    "imageURL": "",
     "tags": [
       "windows",
       "ibm",
@@ -506,7 +506,7 @@
     "name": "IBM's pcsnp.exe triggers SYSTEM cmd.exe",
     "description": "IBM's `pcsnp.exe` calls `cmd.exe /c mkdir C:\\Temp` from processes such as `mpnotify.exe` and `lsass.exe`. Read the writeup for this; it's amazing.",
     "documentation": "https://github.com/mttaggart/wtfbins/issues/58",
-    "imageURL": "https://private-user-images.githubusercontent.com/32863380/373650840-f7fc7979-7139-42d8-9ae5-3725e24b62b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjg4ODE3MzcsIm5iZiI6MTcyODg4MTQzNywicGF0aCI6Ii8zMjg2MzM4MC8zNzM2NTA4NDAtZjdmYzc5NzktNzEzOS00MmQ4LTlhZTUtMzcyNWUyNGI2MmIwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDE0VDA0NTAzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNjYzg2NDFlODkzYTY2NTAwYjg2NjdhYTI4Y2Y4MzkwMGJlZjc5NzFkODcwYzI3MzU0M2I4MjkxOTdhZmQyYmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.FzAFNHl3qOHF1cv4qOiBUbxzhHAQXGBz2teSvqApP9c",
+    "imageURL": "",
     "tags": [
       "windows",
       "cmd",
