@@ -540,5 +540,18 @@
       "windows",
       "lsass"
     ]
+  },
+  {
+    "id": 40,
+    "contributor": "Thurein Oo",
+    "preview": "draw.io Desktop hides files with attrib.exe",
+    "name": "draw.io.exe",
+    "description": "`draw.io.exe` uses `attrib.exe` to hide the file `.dtmp` using the command `attrib +h filename.dtmp.`",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/53",
+    "imageURL": "",
+    "tags": [
+      "windows",
+      "draw.io"
+    ]
   }
 ]
