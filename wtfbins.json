@@ -506,7 +506,7 @@
     "name": "IBM's pcsnp.exe triggers SYSTEM cmd.exe",
     "description": "IBM's `pcsnp.exe` calls `cmd.exe /c mkdir C:\\Temp` from processes such as `mpnotify.exe` and `lsass.exe`. Read the writeup for this; it's amazing.",
     "documentation": "https://github.com/mttaggart/wtfbins/issues/58",
-    "imageURL": "https://private-user-images.githubusercontent.com/32863380/373650840-f7fc7979-7139-42d8-9ae5-3725e24b62b0.png",
+    "imageURL": "https://private-user-images.githubusercontent.com/32863380/373650840-f7fc7979-7139-42d8-9ae5-3725e24b62b0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjg4ODE3MzcsIm5iZiI6MTcyODg4MTQzNywicGF0aCI6Ii8zMjg2MzM4MC8zNzM2NTA4NDAtZjdmYzc5NzktNzEzOS00MmQ4LTlhZTUtMzcyNWUyNGI2MmIwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDE0VDA0NTAzN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTNjYzg2NDFlODkzYTY2NTAwYjg2NjdhYTI4Y2Y4MzkwMGJlZjc5NzFkODcwYzI3MzU0M2I4MjkxOTdhZmQyYmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.FzAFNHl3qOHF1cv4qOiBUbxzhHAQXGBz2teSvqApP9c",
     "tags": [
       "windows",
       "cmd",
@@ -520,7 +520,7 @@
     "name": "OpenVAS runs WMIExec",
     "description": "When connecting to Windows hosts, OpenVAS will run impacket-wmiexec against the host. The resulting events look identical to a secretsdump run that you'd [hunt for](https://riccardoancarani.github.io/2020-05-10-hunting-for-impacket).",
     "documentation": "https://github.com/greenbone/openvas-scanner/blob/308cefe338df888814b735d11302f4b7e258bdc3/nasl/nasl_smb.c#L367",
-    "imageURL": "https://private-user-images.githubusercontent.com/6811816/332151827-f948ecd8-de26-4ed2-8632-42fd6d7eb4fa.png",
+    "imageURL": "https://private-user-images.githubusercontent.com/6811816/332151827-f948ecd8-de26-4ed2-8632-42fd6d7eb4fa.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjg4ODE2NjcsIm5iZiI6MTcyODg4MTM2NywicGF0aCI6Ii82ODExODE2LzMzMjE1MTgyNy1mOTQ4ZWNkOC1kZTI2LTRlZDItODYzMi00MmZkNmQ3ZWI0ZmEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTAxNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDEwMTRUMDQ0OTI3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODI0YTIxMWNlM2UzYTM2MGYxZDlhNjE0YjBhMmJiN2EwZTAyMjUzNTYwZWEyM2JiNjA3ZDE4OWYyOWZhNThjYSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.f6705GqOMedbEBFAcOSc71ZXHM0PAQCxKWMCi8gOqkI",
     "tags": [
       "windows",
       "impacket",
