@@ -527,5 +527,18 @@
       "greenbone",
       "openvas"
     ]
+  },
+  {
+    "id": 39,
+    "contributor": "59e5aaf4",
+    "preview": "SecurityHealthService.exe unsets, the resets, protected status for LSA",
+    "name": "SecurityHealthService.exe unprotects LSA",
+    "description": "Sets `HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\RunAsPPL` to 0 (= insecure = might raise EDR alerts ahem ahem) just before setting it (back?) to 2 for no valid reason.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/44",
+    "imageURL": "https://user-images.githubusercontent.com/32863380/233596602-ad4dd523-6118-4407-a77e-4cdfed9e2b39.png",
+    "tags": [
+      "windows",
+      "lsass"
+    ]
   }
 ]
