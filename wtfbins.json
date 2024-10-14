@@ -490,13 +490,27 @@
     "id": 36,
     "contributor": "Leo T.",
     "preview": "Teramind installs its own dwm.exe",
-    "name": "Termind's dwm.exe",
+    "name": "Teramind's dwm.exe",
     "description": "Teramind installs its own dwm.exe file inside a subfolder of `C:\\ProgramData\\{4cec2908-5ce4-48f0-a717-8fc833d8017a}`.",
     "documentation": "https://kb.teramind.co/en/articles/8791033-antivirus-configuration-guide",
     "imageURL": "https://teramind-9d92f7735864.intercom-attachments-1.com/i/o/927577680/f211dd591223a1631750252e/mceclip5.png?expires=1728878400&signature=747f9503d9d7d3255336facf476169924a77c285935a331f71ed2d433b8a58e9&req=fSIgE855m4lfFb4f3HP0gIxaQ7CIfzyl0vsYDWvJtsFSSbvucfvY8BvFbGjV%0AHCXZwU2sUd%2BHzbIH2g%3D%3D%0A",
     "tags": [
       "windows",
       "teramind",
+    ]
+  },
+  {
+    "id": 37,
+    "contributor": "59e5aaf4",
+    "preview": "pcsnp.exe spawns cmd from Windows processes",
+    "name": "IBM's pcsnp.exe triggers SYSTEM cmd.exe",
+    "description": "IBM's `pcsnp.exe` calls `cmd.exe /c mkdir C:\\Temp` from processes such as `mpnotify.exe` and `lsass.exe`. Read the writeup for this; it's amazing.",
+    "documentation": "https://github.com/mttaggart/wtfbins/issues/58",
+    "imageURL": "https://private-user-images.githubusercontent.com/32863380/373650840-f7fc7979-7139-42d8-9ae5-3725e24b62b0.png",
+    "tags": [
+      "windows",
+      "cmd",
+      "ibm"
     ]
   }
 ]
