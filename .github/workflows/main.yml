@@ -1,0 +1,42 @@
+name: Zola Build
+
+on:
+  push:
+    branches: [pages]
+  pull_request:
+    branches: [pages]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update Rust
+        run: rustup update stable
+      - name: Install Zola
+        run: cargo install --git https://github.com/getzola/zola
+      - name: Build with Zola
+        run: zola build
+      - name: Upload artifact
+        # Automatically uploads an artifact from the './_site' directory by default
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: public
+
+  deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
