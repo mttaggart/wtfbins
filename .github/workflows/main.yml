@@ -1,4 +1,4 @@
-name: Zola Build
+name: Next Build
 
 on:
   push:
@@ -16,16 +16,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Update Rust
-        run: rustup update stable
-      - name: Install Zola
-        run: cargo install --git https://github.com/getzola/zola
-      - name: Build with Zola
-        run: zola build
+        run: npm i
+      - name: Build
+        run: npm run build
+      - name: Export
+        run: npm run export
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
         with:
-          path: public
+          path: out
 
   deploy:
     permissions:
