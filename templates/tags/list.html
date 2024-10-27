@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  {{ super() }}
+  <main>
+    <!-- <div class="search-form"> -->
+        <!-- <label>Search</label> -->
+        <!-- <input type="text" /> -->
+    <!-- </div> -->
+
+    <ul class="bin-container">
+      {% for term in terms %}
+        <li class="bin-item">
+          <a class="wtfbin-tag" href="{{ term.permalink | safe }}">{{ term.name }}</a>
+          <hr>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+{% endblock content %}

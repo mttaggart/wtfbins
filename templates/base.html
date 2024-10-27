@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  {% block head %}
+    <meta name="description" content="WTFBins: benign applications that exhibit suspicious behavior" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="icon" href="/favicon.ico" />
+
+    {% block title %}    
+      <title>{{ config.title }}</title>
+    {% endblock title %}
+ {% endblock head %}
+    <!-- Enable responsiveness on mobile devices-->
+   {% if config.generate_feed %}
+      <link rel="alternate" type={% if config.feed_filenames[0] == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filenames[0]) | safe }}">
+    {% endif %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ get_url(path="site.css", trailing_slash=false) | safe }}">
+    {% endblock css %}
+  </head>
+  <body class="main container">
+    {% block nav %}
+      <nav>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contribute">Contribute</a>
+      </nav>
+    {% endblock nav %}
+    {% block content %}
+      <h1>WTFBins?!</h1>
+    {% endblock nav %}
+    {% block footer %}
+      <footer class="footer">
+          <p>
+              <a href="https://github.com/mttaggart/wtfbins">Made</a> with 💜 by <a href="https://taggartinstitute.org">The Taggart Institute</a>
+          </p>
+      </footer>
+    {% endblock footer %}
+  </body>
+</html>

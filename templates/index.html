@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  {{ super() }}
+  <main>
+    <!-- <div class="search-form"> -->
+        <!-- <label>Search</label> -->
+        <!-- <input type="text" /> -->
+    <!-- </div> -->
+
+    <ul class="bin-container">
+      {% for page in section.pages | reverse %}
+        <li class="bin-item">
+          <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+          <hr>
+          <p>{{ page.summary | safe }}</p>
+          <footer class="bin-footer">
+            <div class="tag-container">
+              <ul>
+                {% if page.taxonomies.tags %}
+                    {% for tag in page.taxonomies.tags %}
+                        <a class="wtfbin-tag" href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
+                    {% endfor %}
+                {% endif %}
+              </ul>
+            </div>
+          </footer
+        </li>
+      {% endfor %}
+    
+    </ul>
+  </main>
+{% endblock content %}

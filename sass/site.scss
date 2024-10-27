@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+  font-family: "SportsNight";
+  src: url("/fonts/SFSportsNight.woff") format("woff");
+}
+
+body {
+  background: rgb(41, 41, 41);
+  color: #ffffff;
+  font-size: 16px;
+  font-family:'Open Sans', sans-serif;
+  hyphens: auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: "SportsNight", "Open Sans", Courier, monospace;
+  font-size: 4rem;
+  margin: 1rem;
+  font-weight: 500;
+  color: magenta;
+}
+
+a {
+  color: white;
+}
+
+nav {
+  font-size: 1.3rem;
+  padding: 0px 10px;
+}
+
+nav a {
+  margin-right: 1rem;
+}
+
+code {
+  color: magenta;
+  background: rgb(41, 41, 41);
+  padding: 3px;
+}
+
+.footer p, .footer a {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "SportsNight";
+    color: white;
+}
+
+.bin-item {
+    list-style: none;
+    /* background: rgb(138, 138, 138); */
+    background: rgb(90, 98, 101);
+    padding: 1rem;
+    margin: 10px 10px;
+    border-radius: 10px;
+    max-width: 30%;
+    min-width: 30%;
+    font-weight: 400;
+    /* transition: box-shadow .3s; */
+    box-shadow: 1px 1px 3px black;
+    &.contribute, &.about, &.detail {
+      margin: 20px auto;
+      min-width: 80%;
+      max-width: 80%;
+    }
+    & img {
+      max-width: 80%;
+      display: block; 
+      margin: auto;
+    }
+}
+
+.bin-item h2 {
+    margin: 0;
+}
+
+@media screen and (max-width: 1025px) {
+    .bin-item {
+        flex-direction: column;
+        max-width: 90%;
+        min-width: 90%;
+
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .bin-item {
+        max-width: 90%;
+        min-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.bin-container {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    hyphens: manual;
+  }
+  .tagline {
+    padding: 0px 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 700px) {
+    .bin-container {
+      flex-direction: column;
+    }
+  }
+
+.tag-container h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.tag-container ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.wtfbin-tag {
+    font-family: "Open Sans";
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0.2rem;
+    padding: 0.4rem;
+    border-radius: 5px;
+    background: rgb(41, 41, 41);
+}
+a.wtfbin-tag:hover {
+    color: magenta;
+    cursor: pointer;
+}
+
+.bin-footer p, .bin-footer a {
+    text-align: center;
+    color: white;
+}
+
+.search-form {
+    margin-top: 1rem;
+    vertical-align: middle;
+    padding: 1rem;
+}
+.search-form label {
+    margin-right: 1rem;
+}
+
+.search-form input {
+    width: 80%;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    padding: 0.2rem;
+    background: black;
+    color: magenta;
+    border: 1px dashed magenta;
+    border-radius: 3px;
+}
+
+@media screen and (min-width: 700px) {
+    .search-form input {
+        display: block;
+        width: 98%;
+    }
+
+    .search-form {
+        padding: 0rem 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    .search-form input {
+        display: block;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .search-form input {
+        display: block;
+        width: 100%;
+    }
+
+    .search-form label {
+        display: block;
+        margin: 0.4rem 0rem;;
+    }
+
+}
