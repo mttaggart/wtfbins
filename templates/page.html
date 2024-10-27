@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  {% block title %}
+    <title>WTFBins - {{ page.title }}</title>
+  {% endblock title %}
+    {% block card %}
+      <meta property="og:url" content="{{ page.permalink | safe }}" />
+      <meta property="og:card" content="summary_large_image" />
+      <meta property="og:title" content="WTFBins - {{ page.title }}"/>
+      <meta property="og:author" content="{{ page.extra.contributor | safe }}" />
+      <meta property="og:description" content="{{ page.description | safe }}"/>
+      {% if page.extra.image_url %}
+      <meta property="og:image" content="{{ page.extra.image_url | safe }}" />
+      {% else %}
+      <meta property="og:image" content="https://wtfbins.wtf/wtfbin.png" />
+      {% endif %}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="WTFBins = {{ page.title }}"/>
+      <meta name="twitter:site" content="@mttaggart" />
+      <meta name="twitter:creator" content="@mttaggart" />
+      <meta property="twitter:description" content="{{ page.description | safe }}"/>
+    {% endblock card %}
+{% endblock head %}
+{% block content %}
+  <div class="bin-item detail">
+    <h2>{{page.title}}</h2>
+    {% if page.extra.image_url %}
+      <img src="{{ page.extra.image_url | safe }}" />
+    {% endif %}
+    <p>
+      <b>{{ page.date }} by {{ page.extra.contributor }}</b>
+    </p>
+    {{ page.content | safe }}
+    <p><a href="{{ page.extra.documentation_url }}">Documentation</a></p>
+  </div>
+{% endblock content %}
