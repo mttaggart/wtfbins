@@ -11,6 +11,19 @@
     {% block title %}    
       <title>{{ config.title }}</title>
     {% endblock title %}
+    {% block card %}
+      <meta property="og:url" content="https://wtfbins.wtf" />
+      <meta property="og:card" content="summary_large_image" />
+      <meta property="og:title" content="WTFBins"/>
+      <meta property="og:author" content="mttaggart" />
+      <meta property="og:description" content="WTFBins: benign applications that exhibit suspicious behavior"/>
+      <meta property="og:image" content="https://wtfbins.wtf/wtfbin.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="WTFBins"/>
+      <meta name="twitter:site" content="@mttaggart" />
+      <meta name="twitter:creator" content="@mttaggart" />
+      <meta property="twitter:description" content="WTFBins: benign applications that exhibit suspicious behavior"/>
+    {% endblock card %}
  {% endblock head %}
     <!-- Enable responsiveness on mobile devices-->
    {% if config.generate_feed %}
