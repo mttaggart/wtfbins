@@ -33,5 +33,16 @@
     </p>
     {{ page.content | safe }}
     <p><a href="{{ page.extra.documentation_url }}">Documentation</a></p>
+    <footer class="bin-footer">
+      <div class="tag-container">
+        <ul>
+          {% if page.taxonomies.tags %}
+              {% for tag in page.taxonomies.tags %}
+                  <a class="wtfbin-tag" href="{{ get_taxonomy_url(kind="tags", name=tag) | safe }}">{{ tag }}</a>
+              {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+    </footer
   </div>
 {% endblock content %}
