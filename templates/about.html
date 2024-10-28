@@ -1,4 +1,20 @@
 {% extends "base.html" %}
+{% block title %}
+<title>WTFBins - About</title>
+{% endblock title %}
+{% block card %}
+  <meta property="og:url" content="https://wtfbins.wtf/about" />
+  <meta property="og:card" content="summary_large_image" />
+  <meta property="og:title" content="WTFBins - About"/>
+  <meta property="og:author" content="mttaggart" />
+  <meta property="og:description" content="WTFBins: benign applications that exhibit suspicious behavior"/>
+  <meta property="og:image" content="https://wtfbins.wtf/wtfbin.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WTFBins"/>
+  <meta name="twitter:site" content="@mttaggart" />
+  <meta name="twitter:creator" content="@mttaggart" />
+  <meta property="twitter:description" content="WTFBins: benign applications that exhibit suspicious behavior"/>
+{% endblock card %}
 {% block content %}
 {{ super() }}
 <div class="about bin-item">
