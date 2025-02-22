@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WTFBins
 
-## Getting Started
+**WTFBin (n):** a benign application that exhibits malicious behavior. These applications tend to confuse and alarm security analysts during incident response.
 
-First, run the development server:
+This project exists to identify, catalog, and lightly poke fun at these applications, in the hopes that we can make analysts' lives just a little bit better.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Contributing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Found a WTFBin? We have a [WTFBin Issue Template](https://github.com/mttaggart/wtfbins/issues/new?assignees=&labels=new+wtfbin&template=custom.md&title=%5BNew+WTFBin%5D%3A+WTFBIN+Here) for you to use! Each one will be reviewed, and if it meets the WTFBin standard, will be added to the catalog.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## What Makes a WTFBin?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+We consider each submission individually, but here are some guidelines. WTFBins:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Do something malware is known to do (e.g. base64-encode PowerShell commands)
+  - Use MITRE ATT&CK as a guide
+- Are not core components of the operating system
+- Show up frequently, or enough to get noticed
+- Stop you for a moment during incident response/analysis, making you say: WTF
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Weird Objections
 
-## Learn More
+> You're just making a list of places for bad guys to hide!
 
-To learn more about Next.js, take a look at the following resources:
+While it is _theoretically possible_ some sophisticated threat actor is using these exotic applications as hidey-holes, it is sigificantly more likely that they will simply cause noise and confusion during incident response, or false positives in alerting.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+And honestly, the baddies don't have to work that hard, usually. We're doing more good than harm with this list. Get outta here with your conspiracy theory-based threat model.
