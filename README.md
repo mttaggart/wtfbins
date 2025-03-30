@@ -1,3 +1,5 @@
+# WTFBins HAS MOVED TO [CODEBERG](https://codeberg.org/The-Taggart-Institute/wtfbins)
+
 # WTFBins
 
 **WTFBin (n):** a benign application that exhibits malicious behavior. These applications tend to confuse and alarm security analysts during incident response.
